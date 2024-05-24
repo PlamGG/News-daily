@@ -1,0 +1,213 @@
+.news-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .content-wrapper h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  .content-wrapper p {
+    margin: 20px 0;
+    text-align: justify;
+    line-height: 1.6;
+    color: #444;
+    font-size: 1.1rem; /* เพิ่มขนาดตัวอักษร */
+  }
+  .bi{
+    color: #23be29;
+    margin: 5%;
+    max-width: 200%;
+    height: auto;
+  }
+  .content-wrapper p.indent {
+    text-indent: 2em;
+  }
+  .recommended-articles {
+    margin-top: 100px;
+  }
+  .recommended-articles h5 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 0;
+  }
+  .recommended-articles img {
+    width: 100%;
+    height: auto;
+  }
+  .recommended-articles a {
+    display: block;
+    padding: 10px;
+    color: #575757;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #f8f9fa;
+    font-size: 14px;
+  }
+  .recommended-articles a:hover {
+    color: #23be29;
+  }
+
+  .indent a {
+    color: #23be29;
+    font-weight: bold;
+}
+.news-section{
+  margin-right: 15px ;
+}
+.news-item {
+  border-bottom: 1px solid #dee2e6;
+  padding: 15px 0;
+}
+.news-item img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px; /* เพิ่มขอบมน */
+}
+.news-title-section {
+  font-size: 1.5rem; /* ขนาดใหญ่ขึ้น */
+  font-weight: bold; /* ตัวหนา */
+}
+.news-title {
+  font-size: 0.875rem; /* ขนาดเล็กลง */
+  font-weight: normal; /* ตัวบาง */
+  margin-bottom: 5px;
+  color:#727272 ; /* ใช้สีของข้อความปัจจุบัน */
+}
+.news-title:hover {
+  color: #23be29; /* เปลี่ยนสีเมื่อ hover */
+}
+.news-time {
+  color: #23be29; /* สีเขียว #23be29 */
+  font-size: 0.875rem; /* ขนาดเล็กลง */
+}
+.news-section {
+  margin-top: 20px;
+}
+.view-all {
+  text-align: right;
+  margin-bottom: 10px;
+  font-weight: bold; /* ตัวหน้า */
+  text-decoration: none; /* ไม่มีเส้นใต้ */
+  color: black; /* สีดำ */
+  display: inline-flex;
+  align-items: center;
+}
+.view-all i {
+  margin-left: 5px;
+  transition: transform 0.2s;
+}
+.view-all:hover {
+  color: #23be29; /* เปลี่ยนสีเมื่อ hover */
+}
+.view-all:hover i {
+  transform: translateX(3px); /* ขยับไอคอนไปทางขวาเมื่อ hover */
+}
+.advertisement img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px; /* เพิ่มขอบมน */
+}
+.news-link {
+  text-decoration: none;
+  color: inherit;
+}
+.news-link:hover .news-title {
+  color: #23be29; /* เปลี่ยนสีเมื่อ hover */
+}
+.news-time-tag {
+  color: #23be29; /* สีตัวอักษรเขียว */
+  font-size: 0.875rem; /* ขนาดเล็กลง */
+  text-decoration: none; /* ไม่มีเส้นใต้ */
+}
+.advertisement img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px; /* เพิ่มขอบมน */
+}
+.news-link {
+  text-decoration: none;
+  color: inherit;
+}
+.banner{
+    background-color: #ccc;
+}
+.banner img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+.bg-custom-dark {
+  background-color: #343a40;
+}
+.text-custom-dark {
+  color: #6c757d;
+}
+.Video-tag {
+  color: #23be29; /* สีตัวอักษรเขียว */
+  font-size: 0.875rem; /* ขนาดเล็กลง */
+  text-decoration: none; /* ไม่มีเส้นใต้ */
+}
+.rounded-full {
+  border-radius: 50%;
+}
+.space-y-2 > :not(:last-child) {
+  margin-bottom: .5rem;
+}
+.fw-bold {
+  color: #000000;
+}
+
+
+.Video-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.Video-link:hover .Video-description {
+  color: #23be29;
+}
+
+.Video-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.share{
+  color: #000;
+}
+.Tag{
+  color: #000;
+}
+.social-share img{
+  max-width: 50px;
+  transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์ hover */
+}
+.social-share img:hover {
+  transform: scale(1.1); /* ขยายขนาดรูปเมื่อ hover */
+}
+
+
+.TagNew {
+  color: #000000; 
+}
+
+.tag-link {
+  background-color: #ffffff;
+  border: 1px solid #28a745; 
+  color: #727272; 
+  font-size: smaller;
+}
+.tag-link:hover {
+  background-color: #28a745; 
+  color: #ffffff; 
+}

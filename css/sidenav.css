@@ -1,0 +1,100 @@
+/* เมนูด้านข้าง */
+.sidenav {
+  height: 100%; /* ความสูงเต็มหน้าจอ */
+  width: 0; /* ความกว้าง 0 - เปลี่ยนค่านี้ด้วย JavaScript */
+  position: fixed; /* คงอยู่ในที่เดิม */
+  z-index: 3; /* อยู่ด้านบนสุด */
+  top: 0; /* อยู่ที่ด้านบน */
+  left: 0; /* อยู่ที่ด้านซ้าย */
+  background-color: rgb(255, 255, 255); /* สีพื้นหลังโปร่งใส */
+  overflow-x: hidden; /* ปิดการเลื่อนแนวนอน */
+  padding-top: 60px; /* ระยะห่างด้านบน */
+  transition: 0.5s; /* เอฟเฟคการเปลี่ยนแปลง 0.5 วินาที */
+}
+
+/* เพิ่มคลาส overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* สีดำโปร่งใส 50% */
+  z-index: 2; /* อยู่ด้านหลังเมนู */
+  display: none; /* ซ่อนเริ่มต้น */
+}
+
+/* ลิงก์เมนู */
+.sidenav a {
+  padding: 8px 8px 8px 32px; /* ระยะห่างของข้อความในเมนู */
+  text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+  font-size: 15px; /* ขนาดตัวอักษร */
+  color: #818181; /* สีข้อความ */
+  display: block; /* แสดงเป็นบล็อก */
+  transition: 0.3s; /* เอฟเฟคการเปลี่ยนแปลง 0.3 วินาที */
+  border-bottom: 1px solid rgba(189, 189, 189, 0.5); /* เพิ่มขีดใต้ */
+  margin-left: 15px; /* เพิ่มเว้นระยะขอบซ้ายเข้ามาเล็กน้อย */
+  margin-right: 15px; /* เพิ่มเว้นระยะขอบขวาเข้ามาเล็กน้อย */
+}
+
+/* เมื่อเมาส์ไปชี้ที่ลิงก์ */
+.sidenav a:hover {
+  color: #4CAF50; /* เปลี่ยนสีข้อความเมื่อ hover */
+  font-weight: bold; /* ทำให้เป็นตัวหนาเมื่อ hover */
+  border-bottom: 1px solid #4CAF50; /* เปลี่ยนสีขีดใต้เมื่อ hover เป็นสีเขียว */
+  padding-left: 5px; /* เพิ่มเว้นระยะขอบซ้ายเข้ามาเล็กน้อย */
+  padding-right: 5px; /* เพิ่มเว้นระยะขอบขวาเข้ามาเล็กน้อย */
+}
+
+/* ปุ่มปิด */
+.sidenav .closebtn {
+  position: absolute; /* ตำแหน่งแน่นอน */
+  top: 0; /* ด้านบน */
+  left: 5px; /* ด้านซ้าย */
+  font-size: 36px; /* ขนาดตัวอักษร */
+  margin-left: 0; /* ไม่ต้องกำหนดระยะห่างด้านซ้าย */
+  border-bottom: 1px solid transparent;
+}
+
+/* รูปแบบเนื้อหาหน้า */
+#main {
+  transition: margin-left .5s; /* เอฟเฟคการเปลี่ยนแปลง 0.5 วินาที */
+  padding: 20px; /* ระยะห่างภายใน */
+}
+
+/* บนหน้าจอที่มีความสูงน้อยกว่า 450px */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* ขนาดไอคอน bi-list */
+.bi.bi-list {
+  font-size: 30px;
+}
+
+/* การจัดการไอคอนโซเชียล */
+.nav-social img {
+  width: 24px; 
+  height: 24px; 
+  margin-right: 0.5rem; 
+  display: flex;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
