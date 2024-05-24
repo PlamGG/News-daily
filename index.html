@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <title>news daily</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/sidenav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid d-flex justify-content-between align-items-center ">
+      <!-- Left Menu -->
+      <ul class="navbar-nav">
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">ข่าว</a>
+          <a href="#">บันเทิง</a>
+          <a href="#">ไลฟ์สไตล์</a>
+          <a href="#">วิดีโอ</a>
+          <a href="#">Podcast</a>
+          <a href="#">หวย</a>
+          <a href="#">ดวง</a>
+          <a href="#">นิยาย</a>
+          <a href="#">หนังสือพิมพ์</a>
+          <a href="#">Infographic</a>
+          <a href="#">News daily Talk</a>
+          <a href="#">กีฬา</a>
+          <a href="#">News daily Shopping</a>
+          <a href="#">News daily Money</a>
+          <a href="#">News daily Plus</a>
+          <a href="#">MIRROR</a>
+          <a href="#">News daily TV</a>
+          <a href="#">Future Perfect</a>
+          <div class="nav-social text-center mt-4">
+            <span>ติดตามเราได้ที่</span>
+            <a href="#"><img src="img/footer/facebook-icon.png" alt="Facebook" class="img-fluid"> <span>Facebook</span></a>
+            <a href="#"><img src="img/footer/twitter-icon.png" alt="Twitter" class="img-fluid"> <span>Twitter</span></a>
+            <a href="#"><img src="img/footer/instagram-icon.png" alt="Instagram" class="img-fluid"> <span>Instagram</span> </a>
+            <a href="#"><img src="img/footer/youtube-icon.png" alt="YouTube" class="img-fluid"><span>YouTube</span></a>
+            <a href="#"><img src="img/footer/tiktok-icon.png" alt="tiktok" class="img-fluid"> <span>TikTok</span></a>
+          </div>
+        </div>
+      
+        <!-- Use any element to open the sidenav -->
+        <span onclick="openNav()"><i class="bi bi-list"></i></span>
+      </ul>
+      
+      <!-- เพิ่ม overlay ลงใน HTML ด้านหลังเมนู -->
+      <div id="overlay"></div>
+      
+      
+      <!-- เพิ่ม overlay ลงใน HTML ด้านหลังเมนู -->
+      <div id="overlay"></div>
+      
+      
+      <!-- Logo -->
+      <a class="navbar-brand mx-auto" href="index.html"><img src="img/logo-dark.png" alt="Logo" style="max-height: 50px;"></a>
+      
+      <!-- Login Dropdown -->
+      <div class="header-d dropdown">
+        <!-- Login Button -->
+        <button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-person-circle"></i>
+        </button>
+        <!-- Dropdown Menu -->
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="login.html">เข้าสู่ระบบ</a></li>
+          <li><a class="dropdown-item" href="signup.html">สมัครสมาชิก</a></li>
+        </ul>
+        
+        <!-- Search Button -->
+        <button id="searchButton" class="btn btn-link search"><i class="bi bi-search"></i></button>
+      </div>
+    </div>
+  </nav>
+  <!-- Overlay -->
+<div id="overlay"></div>
+   <!-- Second Navbar Row -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ข่าว
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+            <li><a class="dropdown-item" href="#">พระราชสำนัก</a></li>
+            <li><a class="dropdown-item" href="#">ทั่วไทย</a></li>
+            <li><a class="dropdown-item" href="#">ในกระแส</a></li>
+            <li><a class="dropdown-item" href="#">การเมือง</a></li>
+            <li><a class="dropdown-item" href="#">เศรษฐกิจ</a></li>
+            <li><a class="dropdown-item" href="#">ต่างประเทศ</a></li>
+            <li><a class="dropdown-item" href="#">อาชญากรรม</a></li>
+            <li><a class="dropdown-item" href="#">ยานยนต์</a></li>
+            <li><a class="dropdown-item" href="#">ราคาทองคำ</a></li>
+            <li><a class="dropdown-item" href="#">รายงานพิเศษ</a></li>
+            <li><a class="dropdown-item" href="#">เกษตร</a></li>
+            <li><a class="dropdown-item" href="#">ความยั่งยืน</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            วิดีโอ
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+            <li><a class="dropdown-item" href="#">ดังในกระแส</a></li>
+            <li><a class="dropdown-item" href="#">Interview | Talk</a></li>
+            <li><a class="dropdown-item" href="#">Video</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">หนังสือพิมพ์</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ทีวีออนไลน์
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+            <li><a class="dropdown-item" href="#">ดูย้อนหลัง</a></li>
+            <li><a class="dropdown-item" href="#">ผังรายการ</a></li>
+            <li><a class="dropdown-item" href="#">Live</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ไลฟ์สไตล์
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink5">
+            <li><a class="dropdown-item" href="#">Life</a></li>
+            <li><a class="dropdown-item" href="#">แคปชั่น</a></li>
+            <li><a class="dropdown-item" href="#">วันสำคัญ</a></li>
+            <li><a class="dropdown-item" href="#">แม่และเด็ก</a></li>
+            <li><a class="dropdown-item" href="#">สุขภาพและความงาม</a></li>
+            <li><a class="dropdown-item" href="#">ไอที</a></li>
+            <li><a class="dropdown-item" href="#">ท่องเที่ยว</a></li>
+            <li><a class="dropdown-item" href="#">อาหาร</a></li>
+            <li><a class="dropdown-item" href="#">แฟชั่น</a></li>
+            <li><a class="dropdown-item" href="#">การเงินและการลงทุน</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink6" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              กีฬา
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink6">
+              <li><a class="dropdown-item" href="#">ฟุตบอลต่่างประเทศ</a></li>
+              <li><a class="dropdown-item" href="#">ฟุตบอลไทย</a></li>
+              <li><a class="dropdown-item" href="#">ไฟต์สปอร์ต</a></li>
+              <li><a class="dropdown-item" href="#">กีฬาโลก</a></li>
+              <li><a class="dropdown-item" href="#">แกลเลอรี่</a></li>
+              <li><a class="dropdown-item" href="#">ข่าวเอเชียนเกมส์</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink7" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            บันเทิง
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink7">
+              <li><a class="dropdown-item" href="#">ข่าวบันเทิง</a></li>
+              <li><a class="dropdown-item" href="#">ดารา เซเลบ</a></li>
+              <li><a class="dropdown-item" href="#">กอสซิบ</a></li>
+              <li><a class="dropdown-item" href="#">นางงาม</a></li>
+              <li><a class="dropdown-item" href="#">ละคร ซีรีย์</a></li>
+              <li><a class="dropdown-item" href="#">เพลง</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink8" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ดวง
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink8">
+              <li><a class="dropdown-item" href="#">ดูดวงรายวัน</a></li>
+              <li><a class="dropdown-item" href="#">ทำนายฝัน</a></li>
+              <li><a class="dropdown-item" href="#">ดูดวงไพ่ยิปซี</a></li>
+              <li><a class="dropdown-item" href="#">ดูดวงความรัก</a></li>
+              <li><a class="dropdown-item" href="#">ดูดวงราศี</a></li>
+              <li><a class="dropdown-item" href="#">ดูดวงนักษัตร</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink8" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            หวย
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink8">
+              <li><a class="dropdown-item" href="#">ตรวจหวยย้อนหลัง</a></li>
+              <li><a class="dropdown-item" href="#">เลขเด็ด</a></li>
+              <li><a class="dropdown-item" href="#">สถิติหวยย้อนหลัง</a></li>
+            </ul>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">นิยาย</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ช็อปปิ้ง</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">MONEY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">MIRROR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">NEWS DAILY +</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><span class="dot"></span>LIVE</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+ <!-- Spacer -->
+ <div class="spacer"></div>
+  <!-- main -->
+  <main>
+      <!-- head-main -->
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <p class="underline-text">ข่าว</p>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center p-4 bg-white">
+      <a href="#" class="btn btn-green btn-xxs py-1 px-2 rounded-pill me-3 bg-green-400">พระราชดำรัส</a>
+      <a href="#" class="btn btn-green btn-xxs py-1 px-2 rounded-pill me-3 bg-green-400">ทั่วไป</a>
+      <a href="#" class="btn btn-green btn-xxs py-1 px-2 rounded-pill me-3 bg-green-400">ในกระแส</a>
+      <a href="#" class="btn btn-green btn-xxs py-1 px-2 rounded-pill me-3 bg-green-400">การเมือง</a>
+      <a href="#" class="btn btn-green btn-xxs py-1 px-2 rounded-pill me-3 bg-green-400">เศรษฐกิจ</a>
+      <a href="#" class="btn btn-green btn-xxs py-1 px-2 rounded-pill me-3 bg-green-400">สังคม</a>
+      <a href="#" class="btn btn-green btn-xxs py-1 px-2 rounded-pill me-3 bg-green-400">คุณภาพชีวิต</a>
+      <a href="#" class="btn btn-green btn-xxs py-1 px-2 rounded-pill me-3 bg-green-400">อาชญากรรม</a>
+      <a href="#" class="btn btn-green btn-xxs py-1 px-2 rounded-pill me-3 bg-green-400">สาธารณสุข</a>
+      <a href="#" class="btn btn-green btn-xxs py-1 px-2 rounded-pill me-3 bg-green-400">ความมั่นคง</a>
+      <a href="#" class="btn btn-green btn-xxs py-1 px-2 rounded-pill bg-green-400">ราคาน้ำมัน</a>
+    </div>
+
+
+<!-- silde -->
+<main>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 offset-md-2">
+            <div class="container-fluid p-0 mb-0">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="new.html">
+                            <img src="img/news/1.webp" class="d-block w-100" alt="...">
+                            </a>
+                            <div class="carousel-caption d-none d-md-block">
+                                <p class="card-text">
+                                    <span class="card-date">วันที่ xx/xx/xx</span>
+                                    <span class="badge badge-green">ข่าวสาร</span>
+                                </p>
+                                <h4>“พิธา” ลั่น การตายของ “บุ้ง” จะไม่สูญเปล่า ยันเสรีชนมีอิสระทางความคิด บังคับกันไม่ได้</h4>
+                                <p>“พิธา ลิ้มเจริญรัตน์” เผย เคยเตือนผู้มีอำนาจหลายครั้ง ไม่ควรบีบคั้นให้ต้องสู้ แบบ “บุ้ง ทะลุวัง” ยันการตายจะไม่สูญเปล่า </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <a href="new.html">
+                            <img src="img/news/2.jpg" class="d-block w-100" alt="..."></a>
+                            <div class="carousel-caption d-none d-md-block">
+                                <p class="card-text">
+                                    <span class="card-date">วันที่ xx/xx/xx</span>
+                                    <span class="badge badge-green">ข่าวสาร</span>
+                                </p>
+                                <h4>อัฟกานิสถานอ่วม ฝนถล่มไม่หยุด-น้ำท่วมฉับพลัน ดับอีก 50 ศพ</h4>
+                                <p>อัฟกานิสถานเผชิญฝนตกอย่างหนักในหลายจังหวัด ล่าสุดพบผู้เสียชีวิตอีก 50 ศพ ที่จังหวัดกอร์ ขณะที่พยากรณ์อากาศเตือนว่า ฝนจะตกลงมาเพิ่มอีก</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <a href="new.html">
+                            <img src="img/news/3.webp" class="d-block w-100" alt="..."></a>
+                            <div class="carousel-caption d-none d-md-block">
+                                <p class="card-text">
+                                    <span class="card-date">วันที่ xx/xx/xx</span>
+                                    <span class="badge badge-green">ข่าวสาร</span>
+                                </p>
+                                <h4>โควิด KP.1-2 มาแรง สิงคโปร์ติดเชื้อพุ่ง 90% รพ.ลดผ่าตัดกรณีไม่ฉุกเฉิน</h4>
+                                <p>จำนวนผู้ติดเชื้อไวรัสโควิด-19 ในสิงคโปร์เพิ่มขึ้นเกือบเท่าตัวเมื่อคิดแบบสัปดาห์ต่อสัปดาห์ ขณะที่กระทรวงสาธารณสุขยกระดับมาตรการเพื่อให้โรงพยาบาลรัฐมีที่ว่างเพียงพอรับผู้ป่วย</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <a href="new.html">
+                            <img src="img/news/4.webp" class="d-block w-100" alt="..."></a>
+                            <div class="carousel-caption d-none d-md-block">
+                                <p class="card-text">
+                                    <span class="card-date">วันที่ xx/xx/xx</span>
+                                    <span class="badge badge-green">ข่าวสาร</span>
+                                </p>
+                                <h4>เข้า "ฤดูฝน" 2566 ปีนี้อาจเจอทั้งฝนทิ้งช่วง-พายุหมุนเขตร้อน</h4>
+                                <p>หลายคนคงอยากโบกมือลา "ฤดูร้อน" 2566 ที่ร้อนตับแตกนี่ไปเสียไม่วันนี้ ก็พรุ่งนี้ แต่อดใจรออีกนิด เพราะกรมอุตุนิยมวิทยา ได้ออกประกาศเรื่อง การเริ่มต้นฤดูฝนของประเทศไทย พ.ศ. 2566 </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <a href="new.html">
+                            <img src="img/news/5.webp" class="d-block w-100" alt="..."></a>
+                            <div class="carousel-caption d-none d-md-block">
+                                <p class="card-text">
+                                    <span class="card-date">วันที่ xx/xx/xx</span>
+                                    <span class="badge badge-green">ข่าวสาร</span>
+                                </p>
+                                <h4>กรม สบส. สั่งสอบเข้ม หลังพบเอกสาร "ประวัติผู้ป่วย" หลุดไปเป็น "ถุงขนม"</h4>
+                                <p>"กรมสนับสนุนบริการสุขภาพ" สั่งสอบเข้ม หลังพบเอกสารประวัติผู้ป่วยหลุดไปเป็นถุงขนม เตือน รพ.เอกชนทุกแห่ง ปฏิบัติตามกฎหมายที่เกี่ยวข้องกับสถานพยาบาล และ PDPA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col-lg-3 col-md-3 col-sm-4 col-6">
+          <div class="row p-4">
+              <div class="col">
+                  <div class="card mb-3 ">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <a href="new.html">
+                                <img src="img/news/6.webp" class="card-img-top  rounded-start" alt="..."></a>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-body">
+                                    <p class="card-text">ตั้งชื่อลูกเสือโคร่งน้อง "นีน่า" เตรียมเรียกค่าดูแลตามกฎหมาย 1.3 ล้านบาท</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <a href="new.html">
+                              <img src="img/news/7.webp" class="card-img-top img-fluid" alt="..."></a>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-body">
+                                    <p class="card-text">“เศรษฐา” ลั่น ไม่อาย ใส่ชุดผ้าขาวม้าโชว์ ชี้ น่ายินดีข้าว 10 ปี ไร้สารก่อมะเร็ง</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <a href="new.html">
+                                <img src="img/news/8.jpg" class="card-img-top rounded-start" alt="..."></a>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-body">
+                                    <p class="card-text">เจ้าของฟาร์มรับแล้วไม่ใช่ไลเกอร์ เป็นลูกเสือโคร่งจริง หลังหลุดในชุมชน (คลิป) </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+
+
+    </div>
+</div>
+
+
+  <!-- ข่าวล่าสุด -->
+  <div class="container mt-5">
+    <h2 class="text-news mb-4">ข่าวล่าสุด</h2>
+    <div class="row row-cols-1 row-cols-md-5 g-4">
+        <div class="col">
+            <div class="card">
+                
+                <img src="img/news/9.webp" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-title">สุดเจ๋ง โซเชียลแห่ชื่นชม ผลงานศิลปะ เด็กนักเรียน ม.6 สร้างสรรค์สุดสวยงาม</p>
+                    <p class="card-text">
+                        <span class="badge badge-green">ในกระแส</span>
+                        <span class="card-date">18 พ.ค. 67</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="new.html">
+                <img src="img/news/9.webp" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-title">สุดเจ๋ง โซเชียลแห่ชื่นชม ผลงานศิลปะ เด็กนักเรียน ม.6 สร้างสรรค์สุดสวยงาม</p>
+                    <p class="card-text">
+                        <span class="badge badge-green">ในกระแส</span>
+                        <span class="card-date">18 พ.ค. 67</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="new.html">
+                <img src="img/news/9.webp" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-title">สุดเจ๋ง โซเชียลแห่ชื่นชม ผลงานศิลปะ เด็กนักเรียน ม.6 สร้างสรรค์สุดสวยงาม</p>
+                    <p class="card-text">
+                        <span class="badge badge-green">ในกระแส</span>
+                        <span class="card-date">18 พ.ค. 67</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="new.html">
+                <img src="img/news/9.webp" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-title">สุดเจ๋ง โซเชียลแห่ชื่นชม ผลงานศิลปะ เด็กนักเรียน ม.6 สร้างสรรค์สุดสวยงาม</p>
+                    <p class="card-text">
+                        <span class="badge badge-green">ในกระแส</span>
+                        <span class="card-date">18 พ.ค. 67</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="new.html">
+                <img src="img/news/9.webp" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-title">สุดเจ๋ง โซเชียลแห่ชื่นชม ผลงานศิลปะ เด็กนักเรียน ม.6 สร้างสรรค์สุดสวยงาม</p>
+                    <p class="card-text">
+                        <span class="badge badge-green">ในกระแส</span>
+                        <span class="card-date">18 พ.ค. 67</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+  <!-- ข่าวลยอดนิยม -->
+  <div class="container mt-5"> 
+    <h2 class="text-news mb-4">ข่าวยอดนิยม</h2>
+    <div class="row row-cols-1 row-cols-md-12 g-4">
+        <div class="col-md-3">
+            <div class="card">
+                <a href="new.html">
+                <img src="img/news/10.webp" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-title">"ศุภมาส" นำศิลปกรรมพื้นบ้านของไทย โชว์สายตาชาวโลก สู่สหราชอาณาจักร</p>
+                    <p class="card-text">
+                        <span class="badge badge-green">ภูมิปัญญาไทย</span>
+                        <span class="card-date">18 พ.ค. 67</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- เพิ่มการ์ดอื่นๆ ตามตัวอย่าง -->
+        <div class="col-md-3">
+            <div class="card">
+                <a href="new.html">
+                <img src="img/news/10.webp" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-title">"ศุภมาส" นำศิลปกรรมพื้นบ้านของไทย โชว์สายตาชาวโลก สู่สหราชอาณาจักร</p>
+                    <p class="card-text">
+                        <span class="badge badge-green">ภูมิปัญญาไทย</span>
+                        <span class="card-date">18 พ.ค. 67</span>
+                    </p>
+                </div>
+            </div>
+      </div>
+      <!-- เพิ่มการ์ดอื่นๆ ตามตัวอย่าง -->
+      <div class="col-md-3">
+        <div class="card">
+            <a href="new.html">
+            <img src="img/news/10.webp" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-title">"ศุภมาส" นำศิลปกรรมพื้นบ้านของไทย โชว์สายตาชาวโลก สู่สหราชอาณาจักร</p>
+                    <p class="card-text">
+                        <span class="badge badge-green">ภูมิปัญญาไทย</span>
+                        <span class="card-date">18 พ.ค. 67</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- เพิ่มการ์ดอื่นๆ ตามตัวอย่าง -->
+    <div class="col-md-3">
+        <div class="card">
+            <a href="new.html">
+            <img src="img/news/10.webp" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <p class="card-title">"ศุภมาส" นำศิลปกรรมพื้นบ้านของไทย โชว์สายตาชาวโลก สู่สหราชอาณาจักร</p>
+                <p class="card-text">
+                    <span class="badge badge-green">ภูมิปัญญาไทย</span>
+                    <span class="card-date">18 พ.ค. 67</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- เพิ่มการ์ดอื่นๆ ตามตัวอย่าง -->
+    </div>
+</div>
+
+  <!-- คลิปเด่น -->
+  <div class="container-fluid bg-dark">
+    <div class="container mt-5"> 
+        <div class="row">
+            <div class="col">
+                <h2 class="text-news mb-4 mt-3">คลิปเด่น</h2>
+            </div>
+            <div class="col text-end mt-3">
+                <a href="#" class="text-decoration-none mb-4">ดูทั้งหมด <i class="bi bi-arrow-right-square-fill"></i></a>
+            </div>
+        </div>
+        <div class="row row-cols-lg-2 g-4">
+            <div class="col">
+                <div class="card mb-4">
+                    <div class="card-media">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/jPTD2gnZFUw?si=m2s-eXGJkUswlYOH" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        <h5 class="card-title mt-3">Live Video from the International Space Station (Official NASA Stream)
+                        </h5>
+                        <p class="card-text">
+                            <span class="badge bg-dark"><a href="#" class="text-white text-decoration-none"><i class="bi bi-align-bottom"></i>คลิปเด่น</a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card mb-4">
+                            <a href="new.html">
+                            <img src="img/news/11.jpg" class="card-img-top" alt="..."></a>
+                            <div class="card-media">
+                                <h5 class="card-title">เริ่มขนย้ายกากสารเคมี โรงงานวินโพรเสส 2 โกดัง ไปกำจัดที่ชลบุรี 7,400 ตัน</h5>
+                                <p class="card-text">
+                                    <span class="badge "><a href="#" class="text-white text-decoration-none">คลิปเด่น</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/11.jpg" class="card-img-top" alt="..."></a>
+                            <div class="card-media">
+                                <h5 class="card-title">เริ่มขนย้ายกากสารเคมี โรงงานวินโพรเสส 2 โกดัง ไปกำจัดที่ชลบุรี 7,400 ตัน</h5>
+                                <p class="card-text">
+                                    <span class="badge "><a href="#" class="text-white text-decoration-none">คลิปเด่น</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/11.jpg" class="card-img-top" alt="..."></a>
+                        <div class="card-media">
+                            <h5 class="card-title">เริ่มขนย้ายกากสารเคมี โรงงานวินโพรเสส 2 โกดัง ไปกำจัดที่ชลบุรี 7,400 ตัน</h5>
+                            <p class="card-text">
+                                <span class="badge "><a href="#" class="text-white text-decoration-none">คลิปเด่น</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/11.jpg" class="card-img-top" alt="..."></a>
+                        <div class="card-media">
+                            <h5 class="card-title">เริ่มขนย้ายกากสารเคมี โรงงานวินโพรเสส 2 โกดัง ไปกำจัดที่ชลบุรี 7,400 ตัน</h5>
+                            <p class="card-text">
+                                <span class="badge "><a href="#" class="text-white text-decoration-none">คลิปเด่น</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/11.jpg" class="card-img-top" alt="..."></a>
+                            <div class="card-media">
+                                <h5 class="card-title">เริ่มขนย้ายกากสารเคมี โรงงานวินโพรเสส 2 โกดัง ไปกำจัดที่ชลบุรี 7,400 ตัน</h5>
+                                <p class="card-text">
+                                    <span class="badge "><a href="#" class="text-white text-decoration-none">คลิปเด่น</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/11.jpg" class="card-img-top" alt="..."></a>
+                        <div class="card-media">
+                            <h5 class="card-title">เริ่มขนย้ายกากสารเคมี โรงงานวินโพรเสส 2 โกดัง ไปกำจัดที่ชลบุรี 7,400 ตัน</h5>
+                            <p class="card-text">
+                                <span class="badge "><a href="#" class="text-white text-decoration-none">คลิปเด่น</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+  
+<!-- ทั่วไทย -->
+<div class="container mt-5"> 
+    <div class="row">
+        <div class="col">
+            <h2 class="text-news mb-4 mt-3">ทั่วไทย</h2>
+        </div>
+    </div>
+    <div class="row row-cols-lg-2 g-4">
+        <div class="col">
+            <div class="card mb-4">
+                <div class="card-general">
+                    <a href="new.html">
+                    <img src="img/news/12.webp" class="card-img-top" alt="..."></a>
+                    <h5 class="card-title mt-3 mb-0">เจ้าภาพเทศน์มหาชาติบูรณะ "พระราชนิเวศน์มฤคทายวัน"</h5>
+                    <p class="card-text mb-1">เนื่องในวาระพระบรมราชสมภพ ครบ 12 รอบ มะโรงนักษัตร ของ พระบาทสมเด็จพระมงกุฎเกล้าเจ้าอยู่หัว ประจวบกับวาระครบรอบ “100 ปี” ทรงประกาศเขตพระราชฐาน “พระราชนิเวศน์มฤคทายวัน” อ.ชะอํา จ.เพชรบุรี และเป็นเขตอภัยทาน เมื่อวันวิสาขบูชา ขึ้น 15 คํ่า เดือน 6 ตรงกับวันเสาร์ที่ 17 พ.ค.2467
+                        <a href="#" class="text-white text-decoration-none"><i class="bi bi-align-bottom"></i>ข่าวสาร</a>
+                    </p>
+                    <p class="card-date mb-0">17 พ.ค. 2567</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/13.webp" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-title">สถาบันคุณวุฒิวิชาชีพ (สคช.) ผนึกกำลัง 6 หน่วยงาน ร่วมพัฒนาบุคลากรและนวัตกรรมด้านการบิน ผลักดันให้ไทยเป็นศูนย์กลางการบินและประตูเศรษฐกิจสู่เอเชีย</p>
+                    <p class="card-text">
+                        <span class="card-date">18 พ.ค. 67</span>
+                    </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/13.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">สถาบันคุณวุฒิวิชาชีพ (สคช.) ผนึกกำลัง 6 หน่วยงาน ร่วมพัฒนาบุคลากรและนวัตกรรมด้านการบิน ผลักดันให้ไทยเป็นศูนย์กลางการบินและประตูเศรษฐกิจสู่เอเชีย</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/13.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">สถาบันคุณวุฒิวิชาชีพ (สคช.) ผนึกกำลัง 6 หน่วยงาน ร่วมพัฒนาบุคลากรและนวัตกรรมด้านการบิน ผลักดันให้ไทยเป็นศูนย์กลางการบินและประตูเศรษฐกิจสู่เอเชีย</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/13.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">สถาบันคุณวุฒิวิชาชีพ (สคช.) ผนึกกำลัง 6 หน่วยงาน ร่วมพัฒนาบุคลากรและนวัตกรรมด้านการบิน ผลักดันให้ไทยเป็นศูนย์กลางการบินและประตูเศรษฐกิจสู่เอเชีย</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/13.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">สถาบันคุณวุฒิวิชาชีพ (สคช.) ผนึกกำลัง 6 หน่วยงาน ร่วมพัฒนาบุคลากรและนวัตกรรมด้านการบิน ผลักดันให้ไทยเป็นศูนย์กลางการบินและประตูเศรษฐกิจสู่เอเชีย</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/13.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">สถาบันคุณวุฒิวิชาชีพ (สคช.) ผนึกกำลัง 6 หน่วยงาน ร่วมพัฒนาบุคลากรและนวัตกรรมด้านการบิน ผลักดันให้ไทยเป็นศูนย์กลางการบินและประตูเศรษฐกิจสู่เอเชีย</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="card border-none mb-3 ">
+            <div class="card-all">
+                <h5 class="card-title">ดูทั้งหมด</h5>
+                <a href="#" class="stretched-link"></a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- ข่าวต่างประเทศ -->
+<div class="container-fluid bg-light">
+<div class="container">
+    <div class="row gx-2 g-4">
+        <div class="col-md-8 mb-3">
+            <!-- คอลัมแรก -->
+            <div class="row ">
+                <div class="col-md-6  ">
+                    <div class="col">
+                        <h2 class="text-news mb-4 mt-3">เศรษฐกิจ</h2>
+                    </div>
+                    <!-- คอลัมย่อยที่ 1 -->
+                    <div class="card mb-4 col-md-10">
+                        <a href="new.html">
+                        <img src="img/news/14.jpg" class="card-img-top" alt="..."></a>
+                        <div class="card-general">
+                            <h5 class="card-title">170 ปี Levi’s เรื่องราวความสำเร็จ ผู้ให้กำเนิดกางเกงยีนส์ตัวแรกของโลก</h5>
+                            <p class="card-date mb-0">18 พ.ค. 67</p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 col-md-10 ">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <a href="new.html">
+                                <img src="img/news/17.jpg" class="card-img-top  rounded-start" alt="..."></a>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-body">
+                                    <p class="card-text">คนไทยแบกรายจ่าย 82% ของรายได้ เปิดค่าครองชีพคนไทย แต่ละเดือนใช้จ่ายอะไรมากสุด</p>
+                                    <p class="card-date mb-0">18 พ.ค. 2567 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4 col-md-10 ">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <a href="new.html"></a>
+                                <img src="img/news/17.jpg" class="card-img-top  rounded-start" alt="...">
+                            </div>
+                            <div class="col-6">
+                                <div class="card-body">
+                                    <p class="card-text">คนไทยแบกรายจ่าย 82% ของรายได้ เปิดค่าครองชีพคนไทย แต่ละเดือนใช้จ่ายอะไรมากสุด</p>
+                                    <p class="card-date mb-0">18 พ.ค. 2567 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4 col-md-10 ">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <a href="new.html"></a>
+                                <img src="img/news/17.jpg" class="card-img-top  rounded-start" alt="...">
+                            </div>
+                            <div class="col-6">
+                                <div class="card-body">
+                                    <p class="card-text">คนไทยแบกรายจ่าย 82% ของรายได้ เปิดค่าครองชีพคนไทย แต่ละเดือนใช้จ่ายอะไรมากสุด</p>
+                                    <p class="card-date mb-0">18 พ.ค. 2567 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4 col-md-10 ">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <a href="new.html"></a>
+                                <img src="img/news/17.jpg" class="card-img-top  rounded-start" alt="...">
+                            </div>
+                            <div class="col-6">
+                                <div class="card-body">
+                                    <p class="card-text">คนไทยแบกรายจ่าย 82% ของรายได้ เปิดค่าครองชีพคนไทย แต่ละเดือนใช้จ่ายอะไรมากสุด</p>
+                                    <p class="card-date mb-0">18 พ.ค. 2567 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- คอลัมย่อยที่ 2 -->
+                    <div class="col">
+                        <h2 class="text-news  mb-4 mt-3">เศรษฐกิจ</h2>
+                    </div>
+                    <!-- เพิ่มข้อมูลอื่น ๆ ตามต้องการ -->
+                    <div class="card mb-4 col-md-10">
+                        <a href="new.html">
+                        <img src="img/news/15.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-general">
+                            <h5 class="card-title">โครงการเติมเงินดิจิทัลวอลเล็ต ช่วยคนไม่มีสมาร์ทโฟน</h5>
+                            <p class="card-date mb-0">18 พ.ค. 67</p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 col-md-10 ">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <a href="new.html">
+                                <img src="img/news/18.jpg" class="card-img-top  rounded-start" alt="..."></a>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-body">
+                                    <p class="card-text">พาณิชย์เชิญทูตกว่า 20 ประเทศ ชี้แจงกฎหมายธุรกิจคนต่างด้าว หลังพบนอมินีเพียบ</p>
+                                    <p class="card-date mb-0">18 พ.ค. 67</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4 col-md-10 ">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <a href="new.html">
+                                <img src="img/news/18.jpg" class="card-img-top  rounded-start" alt="..."></a>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-body">
+                                    <p class="card-text">พาณิชย์เชิญทูตกว่า 20 ประเทศ ชี้แจงกฎหมายธุรกิจคนต่างด้าว หลังพบนอมินีเพียบ</p>
+                                    <p class="card-date mb-0">18 พ.ค. 67</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4 col-md-10 ">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <a href="new.html">
+                                <img src="img/news/18.jpg" class="card-img-top  rounded-start" alt="..."></a>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-body">
+                                    <p class="card-text">พาณิชย์เชิญทูตกว่า 20 ประเทศ ชี้แจงกฎหมายธุรกิจคนต่างด้าว หลังพบนอมินีเพียบ</p>
+                                    <p class="card-date mb-0">18 พ.ค. 67</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4 col-md-10 ">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <a href="new.html">
+                                <img src="img/news/18.jpg" class="card-img-top  rounded-start" alt="..."></a>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-body">
+                                    <p class="card-text">พาณิชย์เชิญทูตกว่า 20 ประเทศ ชี้แจงกฎหมายธุรกิจคนต่างด้าว หลังพบนอมินีเพียบ</p>
+                                    <p class="card-date mb-0">18 พ.ค. 67</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12  text-center ">
+                    <div class="card border-none mb-4 col-md-10">
+                        <div class="card-all">
+                            <h5 class="card-title">ดูทั้งหมด</h5>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4   ">
+            <!-- คอลัมที่ 2 -->
+            <div class="col">
+                <h2 class="text-news mb-4 mt-3">ข่าวต่างประเทศ</h2>
+            </div>
+            <!-- เพิ่มข้อมูลอื่น ๆ ตามต้องการ -->
+            <div class="card mb-4 col-md-10 ">
+                <a href="new.html">
+                <img src="img/news/16.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-general">
+                            <h5 class="card-title">ซีเอ็นเอ็นเผยคลิป นักร้องแร็ปเปอร์ชื่อดังขณะทำร้ายแฟนสาวใน รร.หรู (คลิป)</h5>
+                            <p class="card-date mb-0">18 พ.ค. 67</p>
+                        </div>
+            </div>
+            <div class="card mb-4 col-md-10 ">
+                <div class="row g-0">
+                    <div class="col-6">
+                        <a href="new.html">
+                        <img src="img/news/19.webp" class="card-img-top  rounded-start" alt="..."></a>
+                    </div>
+                    <div class="col-6">
+                        <div class="card-body">
+                            <p class="card-text">กองทัพอิสราเอล เผย พบศพตัวประกันอิสราเอล 3 ศพ และได้นำออกจากกาซาแล้ว</p>
+                            <p class="card-date mb-0">18 พ.ค. 67</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4 col-md-10 ">
+                <div class="row g-0">
+                    <div class="col-6">
+                        <a href="new.html">
+                        <img src="img/news/19.webp" class="card-img-top  rounded-start" alt="..."></a>
+                    </div>
+                    <div class="col-6">
+                        <div class="card-body">
+                            <p class="card-text">กองทัพอิสราเอล เผย พบศพตัวประกันอิสราเอล 3 ศพ และได้นำออกจากกาซาแล้ว</p>
+                            <p class="card-date mb-0">18 พ.ค. 67</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4 col-md-10 ">
+                <div class="row g-0">
+                    <div class="col-6">
+                        <a href="new.html">
+                        <img src="img/news/19.webp" class="card-img-top  rounded-start" alt="..."></a>
+                    </div>
+                    <div class="col-6">
+                        <div class="card-body">
+                            <p class="card-text">กองทัพอิสราเอล เผย พบศพตัวประกันอิสราเอล 3 ศพ และได้นำออกจากกาซาแล้ว</p>
+                            <p class="card-date mb-0">18 พ.ค. 67</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4 col-md-10 ">
+                <div class="row g-0">
+                    <div class="col-6">
+                        <a href="new.html">
+                        <img src="img/news/19.webp" class="card-img-top  rounded-start" alt="..."></a>
+                    </div>
+                    <div class="col-6">
+                        <div class="card-body">
+                            <p class="card-text">สี จิ้นผิง สวมกอด ปูติน โชว์พลังมิตรภาพ</p>
+                            <p class="card-date mb-0">18 พ.ค. 67</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card border-none mb-4 col-md-10">
+                    <div class="card-all">
+                        <h5 class="card-title">ดูทั้งหมด</h5>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ข่าวการเมือง -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-news mb-4 mt-3">ข่าวการเมือง</h2>
+        </div>
+    </div>
+    <div class="row row-cols-lg-2 g-4">
+        <div class="col">
+            <div class="card mb-4">
+                <div class="card-political">
+                    <a href="new.html">
+                    <img src="img/news/20.webp" class="card-img-top" alt="..."></a>
+                    <h5 class="card-title mt-3 mb-0">“อนุทิน” เปิดงานประกวดการอนุรักษ์พระบูชา-พระเครื่อง</h5>
+                    <p class="card-text mb-1">“อนุทิน” พร้อมภริยา เปิดงานนิทรรศการประกวดการอนุรักษ์ พระบูชา พระเครื่อง และเหรียญพระคณาจารย์ เฉพาะวัตถุมงคลสาย สมเด็จพระพุฒาจารย์ โต พรหมรังสี วัดระฆังโฆสิตาราม เผย มีความศรัทธาและเคยมาสวดมนต์กราบไหว้หลายครั้ง 
+                        <a href="#" class="text-white text-decoration-none"><i class="bi bi-align-bottom"></i>ข่าวสาร</a>
+                    </p>
+                    <p class="card-date mb-0">18 พ.ค. 2567</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/21.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">“ภูมิธรรม” รอผลข้าว 10 ปี จากกรมวิทยาศาสตร์ฯ ดีใจผลแล็บเอกชนไม่พบสารตกค้าง</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/21.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">“ภูมิธรรม” รอผลข้าว 10 ปี จากกรมวิทยาศาสตร์ฯ ดีใจผลแล็บเอกชนไม่พบสารตกค้าง</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/21.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">“ภูมิธรรม” รอผลข้าว 10 ปี จากกรมวิทยาศาสตร์ฯ ดีใจผลแล็บเอกชนไม่พบสารตกค้าง</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/21.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">“ภูมิธรรม” รอผลข้าว 10 ปี จากกรมวิทยาศาสตร์ฯ ดีใจผลแล็บเอกชนไม่พบสารตกค้าง</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/21.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">“ภูมิธรรม” รอผลข้าว 10 ปี จากกรมวิทยาศาสตร์ฯ ดีใจผลแล็บเอกชนไม่พบสารตกค้าง</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/21.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">“ภูมิธรรม” รอผลข้าว 10 ปี จากกรมวิทยาศาสตร์ฯ ดีใจผลแล็บเอกชนไม่พบสารตกค้าง</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="card border-none mb-3">
+            <div class="card-all">
+                <h5 class="card-title">ดูทั้งหมด</h5>
+                <a href="#" class="stretched-link"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ข่าวในกระแส -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6 bg-white">
+            <h2 class="text-news mb-4">ข่าวในกระแส</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/22.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">“อาจารย์อ๊อด ประกาศยุติบทบาทตรวจสอบข้าวเก่า 10 ปี ในทุกกรณี</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/22.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">“อาจารย์อ๊อด ประกาศยุติบทบาทตรวจสอบข้าวเก่า 10 ปี ในทุกกรณี</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/22.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">“อาจารย์อ๊อด ประกาศยุติบทบาทตรวจสอบข้าวเก่า 10 ปี ในทุกกรณี</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/22.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">“อาจารย์อ๊อด ประกาศยุติบทบาทตรวจสอบข้าวเก่า 10 ปี ในทุกกรณี</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card border-none mb-3">
+                    <div class="card-all">
+                        <h5 class="card-title">ดูทั้งหมด</h5>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 bg-white">
+            <h2 class="text-news mb-4">ข่าวอาชญากรรม</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/23.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">"บิ๊กโจ๊ก" ตื่นแต่เช้าเดิน-วิ่งมหากุศลที่นครฯ ลุย ป.ป.ช. ล่าชื่อถอดถอน</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/23.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">"บิ๊กโจ๊ก" ตื่นแต่เช้าเดิน-วิ่งมหากุศลที่นครฯ ลุย ป.ป.ช. ล่าชื่อถอดถอน</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/23.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">"บิ๊กโจ๊ก" ตื่นแต่เช้าเดิน-วิ่งมหากุศลที่นครฯ ลุย ป.ป.ช. ล่าชื่อถอดถอน</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/23.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">"บิ๊กโจ๊ก" ตื่นแต่เช้าเดิน-วิ่งมหากุศลที่นครฯ ลุย ป.ป.ช. ล่าชื่อถอดถอน</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card border-none mb-3">
+                    <div class="card-all">
+                        <h5 class="card-title">ดูทั้งหมด</h5>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ยานยนต์ -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-news mb-4 mt-3">ยานยนต์</h2>
+        </div>
+    </div>
+    <div class="row row-cols-lg-2 g-4">
+        <div class="col">
+            <div class="card mb-4">
+                <div class="card-car">
+                    <a href="new.html">
+                    <img src="img/news/24.webp" class="card-img-top" alt="..."></a>
+                    <p class="card-date mb-0">18 พ.ค. 2567</p>
+                    <h5 class="card-title mt-3 mb-0">แรง สบาย คลาสสิก พลังเยอรมัน V8 กับ Mercedes-Benz E 55 AMG</h5>
+                    <p class="card-text mb-1">ย้อนกลับไปในยุค 90s นั้น รถเยอรมันสายเล่นโค้งยังมักเป็นพวกรถน้ำหนักเบาหน่อยอย่าง C 36 และ M3 แต่ในระดับตัวถังขนาดกลางเช่นพวก 5-Series และ E-Class นั้น ยังมีความสบายและเน้นแรงในทางตรงเป็นหลัก สิ่งที่ได้มาคือเครื่องจักรนักล่าที่มาดดุแต่ขับใช้งานแล้วยังไม่สะเทือนไส้ รถอย่าง M5 E39 เน้นความสนุกมากกว่าด้วยแรงม้าที่สูงและใช้เกียร์ธรรมดา แต่อีกฝั่งคือ AMG E 55 W210 ซึ่งแรงแบบสบายด้วยเกียร์อัตโนมัติ มาดแก่แต่แอบโหด ในวันนี้แม้อายุเยอะแล้วแต่ยังมีความน่าเล่น
+                        <a href="#" class="text-white text-decoration-none"><i class="bi bi-align-bottom"></i>ข่าวสาร</a>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/25.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">CHANGAN เปิดดีลผู้ผลิตชิ้นส่วนรถในไทย ตั้งเป้าใช้ชิ้นส่วนในประเทศ 60%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/25.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">CHANGAN เปิดดีลผู้ผลิตชิ้นส่วนรถในไทย ตั้งเป้าใช้ชิ้นส่วนในประเทศ 60%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/25.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">CHANGAN เปิดดีลผู้ผลิตชิ้นส่วนรถในไทย ตั้งเป้าใช้ชิ้นส่วนในประเทศ 60%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/25.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">CHANGAN เปิดดีลผู้ผลิตชิ้นส่วนรถในไทย ตั้งเป้าใช้ชิ้นส่วนในประเทศ 60%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/25.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">CHANGAN เปิดดีลผู้ผลิตชิ้นส่วนรถในไทย ตั้งเป้าใช้ชิ้นส่วนในประเทศ 60%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/25.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">CHANGAN เปิดดีลผู้ผลิตชิ้นส่วนรถในไทย ตั้งเป้าใช้ชิ้นส่วนในประเทศ 60%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="card border-none mb-3">
+            <div class="card-all">
+                <h5 class="card-title">ดูทั้งหมด</h5>
+                <a href="#" class="stretched-link"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ความยั่งยืน -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-news mb-4 mt-3">ความยั่งยืน</h2>
+        </div>
+    </div>
+    <div class="row row-cols-lg-2 g-4">
+        <div class="col">
+            <div class="card mb-4">
+                <div class="card-nature">
+                    <a href="new.html">
+                    <img src="img/news/26.webp" class="card-img-top" alt="..."></a>
+                    <p class="card-date mb-0">18 พ.ค. 2567</p>
+                    <h5 class="card-title mt-3 mb-0">ทช.ติดตั้งม่านกันแสงยูวีให้"ปะการัง"เกาะไม้ท่อนหวังให้รอดจากการฟอกขาว</h5>
+                    <p class="card-text mb-1">กรมทรัพยากรทางทะเลและชายฝั่ง นำทีมติดตั้งม่านกันแสงยูวีให้ "ปะการัง" ที่เกาะไม้ท่อน จ.ภูเก็ต เพื่อทดลองลดปัจจัย "การฟอกขาว" ในปะการัง
+                        <a href="#" class="text-white text-decoration-none"><i class="bi bi-align-bottom"></i>ข่าวสาร</a>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/27.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">"พันธุ์ไทย" เปิดตัวกาแฟแคปซูล บรรจุภัณฑ์ย่อยสลายได้ 100%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/27.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">"พันธุ์ไทย" เปิดตัวกาแฟแคปซูล บรรจุภัณฑ์ย่อยสลายได้ 100%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/27.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">"พันธุ์ไทย" เปิดตัวกาแฟแคปซูล บรรจุภัณฑ์ย่อยสลายได้ 100%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/27.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">"พันธุ์ไทย" เปิดตัวกาแฟแคปซูล บรรจุภัณฑ์ย่อยสลายได้ 100%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/27.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">"พันธุ์ไทย" เปิดตัวกาแฟแคปซูล บรรจุภัณฑ์ย่อยสลายได้ 100%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <a href="new.html">
+                        <img src="img/news/27.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <p class="card-title">"พันธุ์ไทย" เปิดตัวกาแฟแคปซูล บรรจุภัณฑ์ย่อยสลายได้ 100%</p>
+                            <p class="card-text">
+                                <span class="card-date">18 พ.ค. 67</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="card border-none mb-3">
+            <div class="card-all">
+                <h5 class="card-title">ดูทั้งหมด</h5>
+                <a href="#" class="stretched-link"></a>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+ <!-- Spacer -->
+ <div class="spacer"></div>
+<!-- ข่าวประชาสัมพันธ์ -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-news mb-4 mt-3">ข่าวประชาสัมพันธ์</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
+            <div class="card mx-auto w-80">
+                <div class="row g-0">
+                    <div class="card-public col-6">
+                        <a href="new.html">
+                        <img src="img/news/28.webp" class="card-img-top rounded-start" alt="..."></a>
+                    </div>
+                    <div class="col-6 mt-3">
+                        <div class="card-public">
+                            <p class="card-text">ปลัด-แม่บ้าน มท. นำลงอยุธยาโค้ชชิ่งผ้า "ลายสิริวชิราภรณ์" กลุ่มโอทอป</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
+            <div class="card mx-auto w-80">
+                <div class="row g-0">
+                    <div class="card-public col-6">
+                        <a href="new.html">
+                        <img src="img/news/29.webp" class="card-img-top rounded-start" alt="..."></a>
+                    </div>
+                    <div class="col-6 mt-3">
+                        <div class="card-public">
+                            <p class="card-text">ระบบแจ้งเหตุฉุกเฉินทางไกล เพื่อผู้พิการ ผู้สูงอายุ และผู้ป่วย</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
+            <div class="card mx-auto w-80">
+                <div class="row g-0">
+                    <div class="card-public col-6">
+                        <a href="new.html">
+                        <img src="img/news/30.webp" class="card-img-top rounded-start" alt="..."></a>
+                    </div>
+                    <div class="col-6 mt-3">
+                        <div class="card-public ">
+                            <p class="card-text">กทท. มอบเงินสนับสนุนโครงการจัดหารถหน่วยคัดกรองมะเร็งนรีเวช 36 ล้านบาท</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</main>
+
+
+
+
+
+</main>
+
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="container mt-5">
+      <div class="footer-logo">
+        <img src="img/footer/logo-dark.png" alt="Logo 1">
+        <img src="img/footer/logo-dark.png" alt="Logo 2">
+        <img src="img/footer/logo-dark.png" alt="Logo 3">
+        <img src="img/footer/logo-dark.png" alt="Logo 4">
+        <img src="img/footer/logo-dark.png" alt="Logo 5">
+      </div>
+  
+      <div class="footer-content">
+        <div class="footer-column">
+          <h5>ข่าว</h5>
+          <ul>
+            <li><a href="#" class="footer-link">พระราชสำนัก</a></li>
+            <li><a href="#" class="footer-link">ในกระแส</a></li>
+            <li><a href="#" class="footer-link">เศรษฐกิจ</a></li>
+            <li><a href="#" class="footer-link">อาชญากรรม</a></li>
+            <li><a href="#" class="footer-link">ราคาทองคำ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>เนื้อหาที่น่าสนใจ</h5>
+          <ul>
+            <li><a href="#" class="footer-link">รายการพิเศษ</a></li>
+            <li><a href="#" class="footer-link">คอลัมน์</a></li>
+            <li><a href="#" class="footer-link">ดวง</a></li>
+            <li><a href="#" class="footer-link">นิยาย</a></li>
+            <li><a href="#" class="footer-link">Podcast</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>กีฬา</h5>
+          <ul>
+            <li><a href="#" class="footer-link">ฟุตบอลต่างประเทศ</a></li>
+            <li><a href="#" class="footer-link">ฟุตบอลไทย</a></li>
+            <li><a href="#" class="footer-link">Sport Insider</a></li>
+            <li><a href="#" class="footer-link">กีฬาโลก</a></li>
+            <li><a href="#" class="footer-link">แกลเลอรี่</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>เกี่ยวกับเรา</h5>
+          <ul>
+            <li><a href="#" class="footer-link">กิจกรรม</a></li>
+            <li><a href="#" class="footer-link">ร่วมงานกับเรา</a></li>
+            <li><a href="#" class="footer-link">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="footer-link">มูลนิธิ</a></li>
+            <li><a href="#" class="footer-link">ศูนย์ข้อมูล</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>ช็อปปิ้ง</h5>
+          <ul>
+            <li><a href="#" class="footer-link">ช็อปปิ้ง</a></li>
+            <li><a href="#" class="footer-link">ซื้อ-ขาย</a></li>
+            <li><a href="#" class="footer-link">ส่วนลด</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>ติดตามเราได้ที่</h5>
+          <div class="social-icons">
+            <a href="#"><img src="img/footer/facebook-icon.png" alt="Facebook" class="img-fluid"></a>
+            <a href="#"><img src="img/footer/twitter-icon.png" alt="Twitter" class="img-fluid"></a>
+            <a href="#"><img src="img/footer/instagram-icon.png" alt="Instagram" class="img-fluid"></a>
+            <a href="#"><img src="img/footer/youtube-icon.png" alt="YouTube" class="img-fluid"></a>
+            <a href="#"><img src="img/footer/tiktok-icon.png" alt="tiktok" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Bottom bar for date and time -->
+      <div class="footer-bottom mt-5">
+        <span id="currentDateTime"></span>
+    </div>
+</footer>
+
+
+
+
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

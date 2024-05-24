@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news daily/Search/no-results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/sidenav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid d-flex justify-content-between align-items-center ">
+        <!-- Left Menu -->
+        <ul class="navbar-nav">
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">ข่าว</a>
+            <a href="#">บันเทิง</a>
+            <a href="#">ไลฟ์สไตล์</a>
+            <a href="#">วิดีโอ</a>
+            <a href="#">Podcast</a>
+            <a href="#">หวย</a>
+            <a href="#">ดวง</a>
+            <a href="#">นิยาย</a>
+            <a href="#">หนังสือพิมพ์</a>
+            <a href="#">Infographic</a>
+            <a href="#">News daily Talk</a>
+            <a href="#">กีฬา</a>
+            <a href="#">News daily Shopping</a>
+            <a href="#">News daily Money</a>
+            <a href="#">News daily Plus</a>
+            <a href="#">MIRROR</a>
+            <a href="#">News daily TV</a>
+            <a href="#">Future Perfect</a>
+            <div class="nav-social text-center mt-4">
+              <span>ติดตามเราได้ที่</span>
+              <a href="#"><img src="img/footer/facebook-icon.png" alt="Facebook" class="img-fluid"> <span>Facebook</span></a>
+              <a href="#"><img src="img/footer/twitter-icon.png" alt="Twitter" class="img-fluid"> <span>Twitter</span></a>
+              <a href="#"><img src="img/footer/instagram-icon.png" alt="Instagram" class="img-fluid"> <span>Instagram</span> </a>
+              <a href="#"><img src="img/footer/youtube-icon.png" alt="YouTube" class="img-fluid"><span>YouTube</span></a>
+              <a href="#"><img src="img/footer/tiktok-icon.png" alt="tiktok" class="img-fluid"> <span>TikTok</span></a>
+            </div>
+          </div>
+        
+          <!-- Use any element to open the sidenav -->
+          <span onclick="openNav()"><i class="bi bi-list"></i></span>
+        </ul>
+        
+        <!-- เพิ่ม overlay ลงใน HTML ด้านหลังเมนู -->
+        <div id="overlay"></div>
+        
+        
+        <!-- เพิ่ม overlay ลงใน HTML ด้านหลังเมนู -->
+        <div id="overlay"></div>
+        
+        
+        <!-- Logo -->
+        <a class="navbar-brand mx-auto" href="index.html"><img src="img/logo-dark.png" alt="Logo" style="max-height: 50px;"></a>
+        
+        <!-- Login Dropdown -->
+        <div class="header-d dropdown">
+          <!-- Login Button -->
+          <button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-circle"></i>
+          </button>
+          <!-- Dropdown Menu -->
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="login.html">เข้าสู่ระบบ</a></li>
+            <li><a class="dropdown-item" href="signup.html">สมัครสมาชิก</a></li>
+          </ul>
+          
+          <!-- Search Button -->
+          <button id="searchButton" class="btn btn-link search"><i class="bi bi-search"></i></button>
+        </div>
+      </div>
+    </nav>
+    <!-- Overlay -->
+  <div id="overlay"></div>
+     <!-- Second Navbar Row -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ข่าว
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+              <li><a class="dropdown-item" href="#">พระราชสำนัก</a></li>
+              <li><a class="dropdown-item" href="#">ทั่วไทย</a></li>
+              <li><a class="dropdown-item" href="#">ในกระแส</a></li>
+              <li><a class="dropdown-item" href="#">การเมือง</a></li>
+              <li><a class="dropdown-item" href="#">เศรษฐกิจ</a></li>
+              <li><a class="dropdown-item" href="#">ต่างประเทศ</a></li>
+              <li><a class="dropdown-item" href="#">อาชญากรรม</a></li>
+              <li><a class="dropdown-item" href="#">ยานยนต์</a></li>
+              <li><a class="dropdown-item" href="#">ราคาทองคำ</a></li>
+              <li><a class="dropdown-item" href="#">รายงานพิเศษ</a></li>
+              <li><a class="dropdown-item" href="#">เกษตร</a></li>
+              <li><a class="dropdown-item" href="#">ความยั่งยืน</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              วิดีโอ
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+              <li><a class="dropdown-item" href="#">ดังในกระแส</a></li>
+              <li><a class="dropdown-item" href="#">Interview | Talk</a></li>
+              <li><a class="dropdown-item" href="#">Video</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">หนังสือพิมพ์</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ทีวีออนไลน์
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+              <li><a class="dropdown-item" href="#">ดูย้อนหลัง</a></li>
+              <li><a class="dropdown-item" href="#">ผังรายการ</a></li>
+              <li><a class="dropdown-item" href="#">Live</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ไลฟ์สไตล์
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink5">
+              <li><a class="dropdown-item" href="#">Life</a></li>
+              <li><a class="dropdown-item" href="#">แคปชั่น</a></li>
+              <li><a class="dropdown-item" href="#">วันสำคัญ</a></li>
+              <li><a class="dropdown-item" href="#">แม่และเด็ก</a></li>
+              <li><a class="dropdown-item" href="#">สุขภาพและความงาม</a></li>
+              <li><a class="dropdown-item" href="#">ไอที</a></li>
+              <li><a class="dropdown-item" href="#">ท่องเที่ยว</a></li>
+              <li><a class="dropdown-item" href="#">อาหาร</a></li>
+              <li><a class="dropdown-item" href="#">แฟชั่น</a></li>
+              <li><a class="dropdown-item" href="#">การเงินและการลงทุน</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink6" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                กีฬา
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink6">
+                <li><a class="dropdown-item" href="#">ฟุตบอลต่่างประเทศ</a></li>
+                <li><a class="dropdown-item" href="#">ฟุตบอลไทย</a></li>
+                <li><a class="dropdown-item" href="#">ไฟต์สปอร์ต</a></li>
+                <li><a class="dropdown-item" href="#">กีฬาโลก</a></li>
+                <li><a class="dropdown-item" href="#">แกลเลอรี่</a></li>
+                <li><a class="dropdown-item" href="#">ข่าวเอเชียนเกมส์</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink7" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              บันเทิง
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink7">
+                <li><a class="dropdown-item" href="#">ข่าวบันเทิง</a></li>
+                <li><a class="dropdown-item" href="#">ดารา เซเลบ</a></li>
+                <li><a class="dropdown-item" href="#">กอสซิบ</a></li>
+                <li><a class="dropdown-item" href="#">นางงาม</a></li>
+                <li><a class="dropdown-item" href="#">ละคร ซีรีย์</a></li>
+                <li><a class="dropdown-item" href="#">เพลง</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink8" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ดวง
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink8">
+                <li><a class="dropdown-item" href="#">ดูดวงรายวัน</a></li>
+                <li><a class="dropdown-item" href="#">ทำนายฝัน</a></li>
+                <li><a class="dropdown-item" href="#">ดูดวงไพ่ยิปซี</a></li>
+                <li><a class="dropdown-item" href="#">ดูดวงความรัก</a></li>
+                <li><a class="dropdown-item" href="#">ดูดวงราศี</a></li>
+                <li><a class="dropdown-item" href="#">ดูดวงนักษัตร</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink8" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              หวย
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink8">
+                <li><a class="dropdown-item" href="#">ตรวจหวยย้อนหลัง</a></li>
+                <li><a class="dropdown-item" href="#">เลขเด็ด</a></li>
+                <li><a class="dropdown-item" href="#">สถิติหวยย้อนหลัง</a></li>
+              </ul>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">นิยาย</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ช็อปปิ้ง</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">MONEY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">MIRROR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">NEWS DAILY +</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#"><span class="dot"></span>LIVE</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<!-- Spacer -->
+<div class="spacer-search"></div>
+
+  
+ <!-- serch -->
+ <div class="container search-container justify-content-center">
+  <div class="row">
+      <div class="col-md-8">
+          <div class="search-label">ค้นหา</div>
+          <div class="input-group mb-3 search-box">
+              <input type="text" class="form-control" placeholder="พิมพ์คำค้นหา..." aria-label="Search">
+              <button class="btn btn-outline-success" type="button"><i class="bi bi-search"></i></button>
+          </div>
+          </div>
+      </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="dropdown">
+        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownSort" data-bs-toggle="dropdown" aria-expanded="false">
+            สิ่งที่เกี่ยวข้อง
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownSort">
+            <li><a class="dropdown-item" href="#">สิ่งที่เกี่ยวข้อง</a></li>
+            <li><a class="dropdown-item" href="#">ล่าสุด</a></li>
+        </ul>
+    </div>
+</div>
+<div class="container my-4">
+  <div class="row">
+      <!-- Left Column -->
+      <div class="col-lg-8">
+          <!-- First News Item -->
+          <div class="card-search mb-3">
+              <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="img/news/31.webp" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                        <a href="your_destination_page.html" class="text-decoration-none"> <!-- เพิ่มลิงก์ที่นี่ -->
+                          <h5 class="card-title">กุมขมับ "โค้ชยะ" แจ้ง "1 ข่าวร้าย" ก่อน "ทีมชาติไทย" ดวล "เกาหลีใต้" ศึก VNL แมตช์ 4</h5>
+                          <p class="card-text">"โค้ชยะ" ณัฐพนธ์ ศรีสมุทรนาค ออกอัปเดตอาการของ พรพรรณ เกิดปราชญ์ หลังตัวเซตคนสำคัญรายนี้ได้รับบาดเจ็บในเกมที่ ทีมชาติไทย พ่ายแพ้ต่อ ทีมชาติแคนาดา 1-3 เซต 21-25, 13-25, 25-20, 17-25 ในการแข่งขันวอลเลย์บอล รายการ เนชันส์ลีก หรือ VNL 2024</p>
+                          <div class="d-flex align-items-center">
+                              <a href="#" class="text-decoration-none small">กีฬา</a>
+                              <p class="card-date mb-0 small ms-2">17 พ.ค. 2567</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Second News Item -->
+          <div class="card-search mb-3">
+              <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="img/news/32.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                        <a href="your_destination_page.html" class="text-decoration-none"> <!-- เพิ่มลิงก์ที่นี่ -->
+                          <h5 class="card-title">มาแล้ว รายชื่อ 11 ตัวจริง "แมนยูฯ" vs "อาร์เซนอล" ศึกชี้ชะตาแชมป์ "พรีเมียร์ลีก"</h5>
+                          <p class="card-text">ฟุตบอล พรีเมียร์ลีก อังกฤษ คู่บิ๊กแมตช์ ประจำคืนวันอาทิตย์ แมนเชสเตอร์ ยูไนเต็ด เปิดรังเหย้า โอลด์ แทรฟฟอร์ด ต้อนรับการมาเยือนของ อาร์เซนอล ทีมรองจ่าฝูงที่กำลังเบียดแย่งตำแหน่งแชมป์กับ แมนเชสเตอร์ ซิตี้</p>
+                          <div class="d-flex align-items-center">
+                              <a href="#" class="text-decoration-none small">กีฬา</a>
+                              <p class="card-date mb-0 small ms-2">17 พ.ค. 2567</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Third News Item -->
+          <div class="card-search mb-3">
+              <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="img/news/33.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                        <a href="your_destination_page.html" class="text-decoration-none"> <!-- เพิ่มลิงก์ที่นี่ -->
+                          <h5 class="card-title">มาแล้ว รายชื่อ 11 ตัวจริง "บุรีรัมย์" vs "ท่าเรือ" ศึกตัดสินชะตาแชมป์ "ไทยลีก"</h5>
+                          <p class="card-text"> ฟุตบอล รีโว่ ไทยลีก 1 ประจำเย็นวันอาทิตย์ "ปราสาทสายฟ้า" บุรีรัมย์ ยูไนเต็ด ที่ต้องการชัยชนะเพื่อการันตีตำแหน่งแชมป์ เปิดบ้านต้อนรับการมาเยือนของ "สิงห์เจ้าท่า" การท่าเรือ เอฟซี</p>
+                          <div class="d-flex align-items-center">
+                              <a href="#" class="text-decoration-none small">กีฬา</a>
+                              <p class="card-date mb-0 small ms-2">17 พ.ค. 2567</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Fourth News Item -->
+          <div class="card-search mb-3">
+              <div class="row g-0">
+                  <div class="col-md-4">
+                      <img src="img/news/34.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body ">
+                        <a href="your_destination_page.html" class="text-decoration-none"> <!-- เพิ่มลิงก์ที่นี่ -->
+                          <h5 class="card-title">"ลิเวอร์พูล" เอาอยู่ เปิดรังอัด "สเปอร์ส" ต่อลมหายใจลุ้นแชมป์ "พรีเมียร์ลีก"</h5>
+                          <p class="card-text">"หงส์แดง" ลิเวอร์พูล เปิดบ้านเอาชนะ ทอตแนม ฮอตสเปอร์ ต่อลมหายใจในการลุ้นแชมป์ พรีเมียร์ลีก อังกฤษ ฤดูกาลนี้ต่อไปอีกเฮือก</p>
+                          <div class="d-flex align-items-center">
+                              <a href="#" class="text-decoration-none small">กีฬา</a>
+                              <p class="card-date mb-0 small ms-2">17 พ.ค. 2567</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- five News Item -->
+          <div class="card-search mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/news/39.webp" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body ">
+                      <a href="your_destination_page.html" class="text-decoration-none"> <!-- เพิ่มลิงก์ที่นี่ -->
+                        <h5 class="card-title">สื่อเกาหลียก “วิภาวี” เป็นเดอะแบก-ชี้สาเหตุ “ไทย” แพ้ “เกาหลี” ส่งท้าย VNL 2024 สนามแรก</h5>
+                        <p class="card-text">ควันหลงการแข่งขันวอลเลย์บอลเนชันส์ลีก 2024 สัปดาห์ที่ 1 นัดที่ 4 ทีมชาติไทย ที่นำมาโดย "โค้ชยะ" ณัฐพนธ์ ศรีสมุทรนาค แพ้ เกาหลีใต้ 1-3 เซต 19-25, 25-23, 16-25, 18-25 ปราชัย 4 นัดรวด หล่นรั้งอันดับ 14 ของโลก เหลือ 199.90 คะแนน</p>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none small">กีฬา</a>
+                            <p class="card-date mb-0 small ms-2">17 พ.ค. 2567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="load-more-container">
+        <div class="card-search-more" style="display: none;">
+            <div class="row g-0">
+          <!-- First News Item -->
+          <div class="card-search mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/news/40.webp" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                      <a href="your_destination_page.html" class="text-decoration-none"> <!-- เพิ่มลิงก์ที่นี่ -->
+                        <h5 class="card-title">“จิราพร” ย้ำ นายกฯ ตั้งใจชวน F1 จัดไทย กระตุ้นท่องเที่ยว-ดึงเงินเข้าประเทศ</h5>
+                        <p class="card-text">“จิราพร” ย้ำ “นายกฯ เศรษฐา” มีความตั้งใจดึงการแข่งขัน Formula 1 มาจัดในไทย ชี้ ช่วยกระตุ้นท่องเที่ยว และส่งผลดีต่อภาคส่วนที่เกี่ยวข้อง ดึงเม็ดเงินเข้าประเทศ กระจายรายได้สู่คนไทย</p>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none small">การเมือง</a>
+                            <p class="card-date mb-0 small ms-2">17 พ.ค. 2567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Second News Item -->
+        <div class="card-search mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/news/41.webp" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                      <a href="your_destination_page.html" class="text-decoration-none"> <!-- เพิ่มลิงก์ที่นี่ -->
+                        <h5 class="card-title">ชาวสวนราชบุรี เพาะพันธุ์มะพร้าวน้ำหอมดำเนินสะดวก ยอดขายดีหลังฝนแรกเริ่มตก</h5>
+                        <p class="card-text">เกษตรกรชาวสวนมะพร้าวน้ำหอมดำเนินสะดวก จ.ราชบุรี กำลังเร่งบรรจุต้นพันธุ์มะพร้าวน้ำหอมส่งลูกค้า หลังช่วงนี้ฝนตกต่อเนื่อง เหมาะกับการลงทุนปลูกมะพร้าวตามสวน โดยสนนราคาผลละ 80-หลักร้อยบาท เนื่องจากภาวะเอลนีโญทำให้ผลผลิตลูกมะพร้าวลดลง</p>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none small">เกษตร</a>
+                            <p class="card-date mb-0 small ms-2">17 พ.ค. 2567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Third News Item -->
+        <div class="card-search mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/news/42.webp" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                      <a href="your_destination_page.html" class="text-decoration-none"> <!-- เพิ่มลิงก์ที่นี่ -->
+                        <h5 class="card-title">รวมจุดดำน้ำในประเทศไทย ที่เป็นจุดหมายปลายทางยอดนิยมสำหรับนักดำน้ำทั่วโลก</h5>
+                        <p class="card-text">ประเทศไทย มีจุดแข็งในการท่องเที่ยวเป็นอย่างมาก ด้วยแหล่งท่องเที่ยวทางวัฒนธรรมที่หลากหลาย และทรัพยากรธรรมชาติอันสมบูรณ์ ‘การเที่ยวทะเลและชายหาด’ รวมถึง ‘กิจกรรมดำน้ำ’ จึงเป็นสิ่งที่นักท่องเที่ยวในหลายๆ ประเทศใฝ่ฝันที่จะเดินทางมาท่องเที่ยวอย่างไม่ขาดสาย</p>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none small">ท่องเที่ยว</a>
+                            <p class="card-date mb-0 small ms-2">17 พ.ค. 2567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fourth News Item -->
+        <div class="card-search mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/news/43.webp" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body ">
+                      <a href="your_destination_page.html" class="text-decoration-none"> <!-- เพิ่มลิงก์ที่นี่ -->
+                        <h5 class="card-title">ผลตรวจสอบข้าว 10 ปีเป็นเครื่องพิสูจน์ รัฐบาลย้ำขั้นตอนโปร่งใส ขอให้มั่นใจ</h5>
+                        <p class="card-text">โฆษกรัฐบาล เผย ผลการตรวจสอบข้าว 10 ปี จากโครงการจำนำข้าว 2 โกดังสุรินทร์ กรมวิทยาศาสตร์การแพทย์ ยืนยันผ่านมาตรฐาน ย้ำทุกขั้นตอนละเอียดและโปร่งใส ขอประชาชนมั่นใจ ข้าวพร้อมขายให้ตลาดที่ต้องการ </p>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none small">การเมือง</a>
+                            <p class="card-date mb-0 small ms-2">17 พ.ค. 2567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- five News Item -->
+        <div class="card-search mb-3">
+          <div class="row g-0">
+              <div class="col-md-4">
+                  <img src="img/news/44.webp" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                  <div class="card-body ">
+                    <a href="your_destination_page.html" class="text-decoration-none"> <!-- เพิ่มลิงก์ที่นี่ -->
+                      <h5 class="card-title">รอบรั้วการตลาด : ลิสเตอรีน ยกระดับการดูแลสุขภาพช่องปากคนไทยให้ดียิ่งขึ้น</h5>
+                      <p class="card-text">ชวีนา จิตรสมบูรณ์ ผู้อำนวยการฝ่ายการตลาด ลิสเตอรีน ประเทศไทย กัมพูชา ลาว และเมียนมา กล่าวว่า ปัญหาสุขภาพช่องปาก 3 อันดับแรกในประเทศไทย ได้แก่ ฟันผุ 49% อาการเสียวฟัน 39% และกลิ่นปาก 30% ซึ่งเรามีฟันแท้เพียงชุดเดียว เมื่อสูญเสียไปแล้วจะไม่สามารถงอกกลับคืนมาได้ ซึ่งการสูญเสียฟันจะส่งผลกระทบต่อความเป็นอยู่ที่ดี ความมั่นใจ และคุณภาพชีวิตของคุณได้</p>
+                      <div class="d-flex align-items-center">
+                          <a href="#" class="text-decoration-none small"> การตลาด</a>
+                          <p class="card-date mb-0 small ms-2">17 พ.ค. 2567</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+            </div>
+        </div>
+        <a href="#" class="btn-more" id="load-more">ดูเพิ่ม<i class="bi bi-arrow-down-circle-fill"></i></a>
+      </div>
+      </div>
+      <!-- Right Column -->
+      <div class="col-lg-3  ">
+          <div class="list-group">
+              <h4>เรื่องเด่นวันนี้</h4>
+              <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                  <span>พระแบบใด ซื้อเนื้อมาให้ร้านทำกับข้าว ตบด้วยของหวาน อยากฉันทุเรียน </span>
+                  <img src="img/news/35.webp" class="img-fluid" alt="icon" style="width: 80px; height: 60px;">
+              </a>
+              <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                  <span>สาวโอดทำกันได้ลงคอ หวังซื้อมะม่วงกวนมากินให้อร่อย เปิดมาเจอยัดไส้</span>
+                  <img src="img/news/36.webp" class="img-fluid" alt="icon" style="width: 80px; height: 60px;">
+              </a>
+              <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                  <span>ย้ำปวดท้องน้อยอย่าปล่อยผ่าน</span>
+                  <img src="img/news/37.webp" class="img-fluid" alt="icon" style="width: 80px; height: 60px;">
+              </a>
+              <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                  <span>ตำรวจนาจอมเทียน ยันมีมาตรการคุมเข้มเด็กแว้น แจงภาพที่เห็น-ไม่ใช่ในพื้นที่</span>
+                  <img src="img/news/38.webp" class="img-fluid" alt="icon" style="width: 80px; height: 60px;">
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Spacer -->
+<div class="spacer-search"></div>
+
+<!-- Footer -->
+<footer>
+  <div class="container mt-5">
+    <div class="footer-logo">
+      <img src="img/footer/logo-dark.png" alt="Logo 1">
+      <img src="img/footer/logo-dark.png" alt="Logo 2">
+      <img src="img/footer/logo-dark.png" alt="Logo 3">
+      <img src="img/footer/logo-dark.png" alt="Logo 4">
+      <img src="img/footer/logo-dark.png" alt="Logo 5">
+    </div>
+
+    <div class="footer-content">
+      <div class="footer-column">
+        <h5>ข่าว</h5>
+        <ul>
+          <li><a href="#" class="footer-link">พระราชสำนัก</a></li>
+          <li><a href="#" class="footer-link">ในกระแส</a></li>
+          <li><a href="#" class="footer-link">เศรษฐกิจ</a></li>
+          <li><a href="#" class="footer-link">อาชญากรรม</a></li>
+          <li><a href="#" class="footer-link">ราคาทองคำ</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5>เนื้อหาที่น่าสนใจ</h5>
+        <ul>
+          <li><a href="#" class="footer-link">รายการพิเศษ</a></li>
+          <li><a href="#" class="footer-link">คอลัมน์</a></li>
+          <li><a href="#" class="footer-link">ดวง</a></li>
+          <li><a href="#" class="footer-link">นิยาย</a></li>
+          <li><a href="#" class="footer-link">Podcast</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5>กีฬา</h5>
+        <ul>
+          <li><a href="#" class="footer-link">ฟุตบอลต่างประเทศ</a></li>
+          <li><a href="#" class="footer-link">ฟุตบอลไทย</a></li>
+          <li><a href="#" class="footer-link">Sport Insider</a></li>
+          <li><a href="#" class="footer-link">กีฬาโลก</a></li>
+          <li><a href="#" class="footer-link">แกลเลอรี่</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5>เกี่ยวกับเรา</h5>
+        <ul>
+          <li><a href="#" class="footer-link">กิจกรรม</a></li>
+          <li><a href="#" class="footer-link">ร่วมงานกับเรา</a></li>
+          <li><a href="#" class="footer-link">เกี่ยวกับเรา</a></li>
+          <li><a href="#" class="footer-link">มูลนิธิ</a></li>
+          <li><a href="#" class="footer-link">ศูนย์ข้อมูล</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5>ช็อปปิ้ง</h5>
+        <ul>
+          <li><a href="#" class="footer-link">ช็อปปิ้ง</a></li>
+          <li><a href="#" class="footer-link">ซื้อ-ขาย</a></li>
+          <li><a href="#" class="footer-link">ส่วนลด</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5>ติดตามเราได้ที่</h5>
+        <div class="social-icons">
+          <a href="#"><img src="img/footer/facebook-icon.png" alt="Facebook" class="img-fluid"></a>
+          <a href="#"><img src="img/footer/twitter-icon.png" alt="Twitter" class="img-fluid"></a>
+          <a href="#"><img src="img/footer/instagram-icon.png" alt="Instagram" class="img-fluid"></a>
+          <a href="#"><img src="img/footer/youtube-icon.png" alt="YouTube" class="img-fluid"></a>
+          <a href="#"><img src="img/footer/tiktok-icon.png" alt="tiktok" class="img-fluid"></a>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- Bottom bar for date and time -->
+    <div class="footer-bottom mt-5">
+      <span id="currentDateTime"></span>
+  </div>
+</footer>
+
+<script src="js\script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</html>

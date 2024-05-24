@@ -1,0 +1,813 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fafafa;
+}
+
+/*--- hambarger menu --*/
+
+/*--  header  -- */
+.bi.bi-person-circle {
+  font-size: 25px; 
+}
+
+.bi.bi-search {
+  font-size: 25px; 
+}
+.navbar {
+  padding: 0 20%;
+}
+.header-d .dropdown-toggle::after {
+  display: none;
+}
+.header-d .dropdown-toggle {
+  color: #23be29;
+}
+.header-d .search {
+  order: 1;
+  color: #23be29;
+}
+
+/* กำหนดให้เป็นตัวอักษรหนาและสีดำ */
+.navbar-nav .nav-item .nav-link {
+  font-weight: bold;
+  color: black;
+}
+
+/* เมื่อชี้ที่ลิงก์ จะเปลี่ยนเป็นสีเขียว */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #23be29;
+}
+
+/* กำหนดให้ตัวอักษรใน dropdown เป็นตัวอักษรหนาและสีดำ */
+.navbar-nav .dropdown-menu .dropdown-item {
+  font-weight: bold;
+  color: black;
+}
+
+/* เมื่อชี้ที่หัวข้อ dropdown จะมีการเลื่อนลงมาเลย */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dot {
+  height: 8px; /* ขนาดสูงของจุด */
+  width: 8px; /* ขนาดกว้างของจุด */
+  background-color: red; /* สีของจุด */
+  border-radius: 50%; /* ทำให้รูปร่างเป็นวงกลม */
+  display: inline-block; /* แสดงเป็นบล็อกในบรรทัดเดียวกับข้อความ */
+  margin-right: 5px; /* ระยะห่างของจุดจากข้อความ */
+}
+.spacer {
+  height: 250px; 
+  background-color:rgb(255, 255, 255);
+}
+.nav-item .dropdown-toggle::after{
+  display: none;
+}
+
+
+
+.card p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+}
+
+.card p::after {
+  content: "...";
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+
+.card p {
+  word-break: break-word;
+}
+
+
+/*-- main--*/
+.underline-text {
+  font-size: 50px;
+  position: relative;
+  color: #23be29;
+}
+
+.underline-text::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: -5px; /* ระยะห่างของเส้นใต้จากข้อความ */
+  border-bottom: 2px solid #23be29; /* เส้นใต้ */
+}
+
+.btn-green {
+  color: #fff;
+  background-color: #1fac6a;
+  border-color: #198754;
+  font-size: small;
+}
+
+.btn-green:hover {
+  background-color: #23be29;
+  color: #fff;
+}
+
+/*-- slide main--*/
+
+h4 {
+  color: #23be29; 
+  font-weight: bold;
+  font-size: x-large;
+  
+}
+.carousel-item {
+  max-width: 200;
+  max-height: 200;
+  position: relative;
+}
+.carousel-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* ความสูงของพื้นที่สีดำด้านล่าง */
+  background-color: rgba(0, 0, 0, 0.7); /* สีดำที่มีความโปร่งแสง 70% */
+  z-index: 1; /* ให้พื้นที่ด้านล่างอยู่หน้าสุด */
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  color: white;
+  z-index: 2; /* ให้ข้อความอยู่หน้าสุด */
+  text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+
+.carousel-caption h5 {
+  color: #23be29; /* เปลี่ยนสี h5 เป็นสีเขียว */
+  margin-bottom: 5px;
+}
+
+.carousel-caption p.card-text {
+  margin-bottom: 0;
+}
+.carousel-indicators button {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+}
+
+.card {
+  transition: transform 0.3s;
+  color: #7a7a7a;
+  width: 100%; /* กำหนดความกว้างของกาด */
+  white-space: nowrap; /* ข้อความไม่ขึ้นบรรทัดใหม่ */
+  overflow: hidden; /* ซ่อนข้อความเมื่อเกินขอบกาด */
+  text-overflow: ellipsis; /* แสดง ... เมื่อข้อความเกิน */
+}
+.card-text {
+  text-align: left;
+}
+.card-img-top {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card:hover .card-text {
+  color:  #198754;
+}
+.container {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.text-news {
+  color: #23be29;
+  font-weight: bold;
+}
+
+.text-decoration-none{
+  color: #23be29;
+}
+
+.card-text {
+  flex-grow: 1;
+}
+.badge-green {
+  color: #23be29;
+  background-color: transparent;
+  border: none;
+}
+.card-media{
+  background-color: #000000;
+  color: #cccccc;
+  border-color: transparent; /* ทำให้สีขอบเป็นโปร่งใส */
+}
+.card-media h5 {
+  color: #c9c9c9; /* สีข้อความเป็นสีขาว */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+  word-break: break-word;
+}
+
+.card-media h5:hover {
+  color: #23be29; 
+}
+.card-media h5::after {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+
+
+
+
+.card-title, .card-date {
+  color: black; /* เปลี่ยนสีตัวอักษรเป็นสีดำ */
+  text-decoration: none; /* ลบเส้นใต้ออก */
+}
+
+.card-general h5{
+  color: #000000; 
+  font-weight: bold;
+  font-size: large;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+.card-general h5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+}
+
+.card-general h5::after {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+
+.card-general h5 {
+  word-break: break-word;
+}
+.card-body.card-text p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+}
+
+.card-body.card-text p::after {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+
+.card-body p {
+  word-break: break-word;
+}
+
+.text-news {
+  position: relative;
+}
+
+.text-news::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-general .card-text {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+
+.card-title {
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+.card-date {
+  font-size: 0.8rem; /* ปรับขนาดฟอนต์ให้เล็กลง */
+}
+.card-general {
+  /* CSS ปกติของ card-general */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-general:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-general:hover .card-title {
+  color:  #198754;
+}
+
+.card-all {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-all:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-all .card-title {
+  font-size: 20px; 
+  color: #464646; 
+}
+.card-all .card-title h5 :hover {
+  color:  #198754;
+}
+
+.card-political h5{
+  color: #000000; 
+  font-weight: bold;
+  font-size: large;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+.card-political h5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+}
+
+.card-political h5::after {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+
+.card-political h5 {
+  word-break: break-word;
+}
+.card-political p{
+  color: #464646; 
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
+.card-political p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+}
+
+.card-political p::after {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+
+.card-political p {
+  word-break: break-word;
+}
+
+
+.card-car h5{
+  color: #000000; 
+  font-weight: bold;
+  font-size: large;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+.card-car h5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+}
+
+.card-car h5::after {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+
+.card-car h5 {
+  word-break: break-word;
+}
+.card-car p{
+  color: #464646; 
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
+.card-car p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+}
+
+.card-car p::after {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+
+.card-car p {
+  word-break: break-word;
+}
+
+.card-nature h5{
+  color: #000000; 
+  font-weight: bold;
+  font-size: large;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+.card-nature h5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+}
+
+.card-nature h5::after {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+
+.card-nature h5 {
+  word-break: break-word;
+}
+.card-nature p{
+  color: #464646; 
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
+.card-nature p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+}
+
+.card-nature p::after {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+
+.card-nature p {
+  word-break: break-word;
+}
+.gutter-bg {
+  background-color: #f8f9fa; /* สีพื้นหลังที่คุณต้องการ */
+  padding: 5px; /* ระยะขอบที่คุณต้องการ */
+}
+
+.card-public p{
+  color: #464646; 
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.card-public p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+}
+
+.card-public p::after {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+
+.card-public p {
+  word-break: break-word;
+}
+/*-- ooter--*/
+.py-1 {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*--*/
+footer {
+  background-color: #f8f9fa;
+  padding-top: 1rem;
+}
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.footer-logo img {
+  max-width: 100px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #dee2e6;
+  padding-top: 1rem;
+}
+
+.footer-content h5 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer-content li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: #6c757d; /* สีเทา */
+}
+
+.footer-content a:hover {
+  color: #23be29; /* สีเขียว */
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 1rem;
+  border-left: 1px solid #dee2e6;
+}
+
+.footer-column:first-child {
+  border-left: none;
+}
+
+.social-icons a {
+  margin-right: 0.5rem;
+  flex-direction: column;
+}
+
+.social-icons img {
+  width: 24px; 
+  height: 24px; 
+}
+
+.footer-bottom {
+  background-color: #23be29;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: light;
+}
+
+
+
+
+
+
+/*--serch--*/
+.dropdown + .dropdown {
+  margin-left: 10px;
+}
+.search-label {
+  color: #23be29;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  margin-left: 20%;
+}
+.search-box-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.search-box{
+  margin-left: 150px;
+  border-radius: 30%;
+}
+.spacer-search {
+  height: 100px; 
+  background-color:rgb(255, 255, 255);
+}
+.error-message {
+  color: red;
+  margin-top: 10px;
+  display: none;
+  justify-content: center;
+  font-size: xx-large;
+  margin-left: 45%;
+}
+.error .search-label,
+.error .search-box,
+.error .error-message {
+    border-color: red !important;
+}
+.error .form-control {
+    border-color: red !important;
+}
+.error .btn-outline-success {
+    background-color: red !important;
+}
+
+
+/*--card-serch--*/
+/* Left Column */
+.card-search {
+  border: none;
+  border-bottom: 1px solid #808080; /* ขีดสั้นๆสีเทาด้านล่าง */
+  border-left: 1px solid #23be29; /* ขอบซ้ายสีเขียว */
+  border-right: 1px solid #23be29; /* ขอบขวาสีเขียว */
+  transition: background-color 0.3s;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card-search:hover {
+  background-color: #f8f9fa;
+}
+.card-search h5 {
+  color: #000;
+  transition: color 0.3s;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: large;
+}
+.card-search:hover h5 {
+  color: #23be29;
+}
+.card-search p {
+  color: #6c757d;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: smaller;
+}
+.card-search p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* จำนวนบรรทัดที่จะแสดง */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* ให้ขึ้นบรรทัดใหม่เมื่อสุดขอบ */
+}
+
+.card-search p::after {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: visible;
+  width: 100%;
+}
+.card-search p {
+  word-break: break-word;
+}
+.text-decoration-none{
+  margin-left: 5px;
+}
+.btn-more {
+  text-decoration: none; /* เอาเส้นใต้ออก */
+  display: inline-flex; /* จัดเรียงให้ icon และข้อความอยู่ในบรรทัดเดียวกัน */
+  align-items: center; /* จัดให้ icon อยู่ตรงกลางตามแนวดิ่ง */
+  color: #23be29;;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-more i {
+  margin-left: 5px; /* เพิ่มระยะห่างของ icon กับข้อความด้านขวา */
+}
+/* Right Column */
+.list-group h4 {
+  color: #fff;
+  background-color: #23be29;
+  padding: 10px;
+  border-radius: 5px;
+}
+.list-group-item {
+  background-color: #000;
+  color: #fff;
+}
+.list-group-item:hover {
+  color: #23be29; /* สีเขียว */
+  background-color: black
+}
+.list-group span{
+  font-size: small;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*-- text hover --*/
+.card-body p:hover {
+  color: #23be29;
+}
+
+.card-general .card-title:hover {
+  color: #23be29;
+}
+.card-political .card-title:hover {
+  color: #23be29;
+}
+
+.card-car .card-title:hover {
+  color: #23be29;
+}
+
+.card-nature .card-title:hover {
+  color: #23be29;
+}
+
+.card-public p:hover {
+  color: #23be29;
+}
+

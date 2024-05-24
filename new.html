@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <title>news daily</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/sidenav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid d-flex justify-content-between align-items-center ">
+            <!-- Left Menu -->
+            <ul class="navbar-nav">
+              <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">ข่าว</a>
+                <a href="#">บันเทิง</a>
+                <a href="#">ไลฟ์สไตล์</a>
+                <a href="#">วิดีโอ</a>
+                <a href="#">Podcast</a>
+                <a href="#">หวย</a>
+                <a href="#">ดวง</a>
+                <a href="#">นิยาย</a>
+                <a href="#">หนังสือพิมพ์</a>
+                <a href="#">Infographic</a>
+                <a href="#">News daily Talk</a>
+                <a href="#">กีฬา</a>
+                <a href="#">News daily Shopping</a>
+                <a href="#">News daily Money</a>
+                <a href="#">News daily Plus</a>
+                <a href="#">MIRROR</a>
+                <a href="#">News daily TV</a>
+                <a href="#">Future Perfect</a>
+                <div class="nav-social text-center mt-4">
+                  <span>ติดตามเราได้ที่</span>
+                  <a href="#"><img src="img/footer/facebook-icon.png" alt="Facebook" class="img-fluid"> <span>Facebook</span></a>
+                  <a href="#"><img src="img/footer/twitter-icon.png" alt="Twitter" class="img-fluid"> <span>Twitter</span></a>
+                  <a href="#"><img src="img/footer/instagram-icon.png" alt="Instagram" class="img-fluid"> <span>Instagram</span> </a>
+                  <a href="#"><img src="img/footer/youtube-icon.png" alt="YouTube" class="img-fluid"><span>YouTube</span></a>
+                  <a href="#"><img src="img/footer/tiktok-icon.png" alt="tiktok" class="img-fluid"> <span>TikTok</span></a>
+                </div>
+              </div>
+            
+              <!-- Use any element to open the sidenav -->
+              <span onclick="openNav()"><i class="bi bi-list"></i></span>
+            </ul>
+            
+            <!-- เพิ่ม overlay ลงใน HTML ด้านหลังเมนู -->
+            <div id="overlay"></div>
+            
+            
+            <!-- เพิ่ม overlay ลงใน HTML ด้านหลังเมนู -->
+            <div id="overlay"></div>
+            
+            
+            <!-- Logo -->
+            <a class="navbar-brand mx-auto" href="index.html"><img src="img/logo-dark.png" alt="Logo" style="max-height: 50px;"></a>
+            
+            <!-- Login Dropdown -->
+            <div class="header-d dropdown">
+              <!-- Login Button -->
+              <button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle"></i>
+              </button>
+              <!-- Dropdown Menu -->
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="login.html">เข้าสู่ระบบ</a></li>
+                <li><a class="dropdown-item" href="signup.html">สมัครสมาชิก</a></li>
+              </ul>
+              
+              <!-- Search Button -->
+              <button id="searchButton" class="btn btn-link search"><i class="bi bi-search"></i></button>
+            </div>
+          </div>
+        </nav>
+        <!-- Overlay -->
+      <div id="overlay"></div>
+         <!-- Second Navbar Row -->
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ข่าว
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                  <li><a class="dropdown-item" href="#">พระราชสำนัก</a></li>
+                  <li><a class="dropdown-item" href="#">ทั่วไทย</a></li>
+                  <li><a class="dropdown-item" href="#">ในกระแส</a></li>
+                  <li><a class="dropdown-item" href="#">การเมือง</a></li>
+                  <li><a class="dropdown-item" href="#">เศรษฐกิจ</a></li>
+                  <li><a class="dropdown-item" href="#">ต่างประเทศ</a></li>
+                  <li><a class="dropdown-item" href="#">อาชญากรรม</a></li>
+                  <li><a class="dropdown-item" href="#">ยานยนต์</a></li>
+                  <li><a class="dropdown-item" href="#">ราคาทองคำ</a></li>
+                  <li><a class="dropdown-item" href="#">รายงานพิเศษ</a></li>
+                  <li><a class="dropdown-item" href="#">เกษตร</a></li>
+                  <li><a class="dropdown-item" href="#">ความยั่งยืน</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  วิดีโอ
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                  <li><a class="dropdown-item" href="#">ดังในกระแส</a></li>
+                  <li><a class="dropdown-item" href="#">Interview | Talk</a></li>
+                  <li><a class="dropdown-item" href="#">Video</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">หนังสือพิมพ์</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ทีวีออนไลน์
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                  <li><a class="dropdown-item" href="#">ดูย้อนหลัง</a></li>
+                  <li><a class="dropdown-item" href="#">ผังรายการ</a></li>
+                  <li><a class="dropdown-item" href="#">Live</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ไลฟ์สไตล์
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink5">
+                  <li><a class="dropdown-item" href="#">Life</a></li>
+                  <li><a class="dropdown-item" href="#">แคปชั่น</a></li>
+                  <li><a class="dropdown-item" href="#">วันสำคัญ</a></li>
+                  <li><a class="dropdown-item" href="#">แม่และเด็ก</a></li>
+                  <li><a class="dropdown-item" href="#">สุขภาพและความงาม</a></li>
+                  <li><a class="dropdown-item" href="#">ไอที</a></li>
+                  <li><a class="dropdown-item" href="#">ท่องเที่ยว</a></li>
+                  <li><a class="dropdown-item" href="#">อาหาร</a></li>
+                  <li><a class="dropdown-item" href="#">แฟชั่น</a></li>
+                  <li><a class="dropdown-item" href="#">การเงินและการลงทุน</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink6" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    กีฬา
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink6">
+                    <li><a class="dropdown-item" href="#">ฟุตบอลต่่างประเทศ</a></li>
+                    <li><a class="dropdown-item" href="#">ฟุตบอลไทย</a></li>
+                    <li><a class="dropdown-item" href="#">ไฟต์สปอร์ต</a></li>
+                    <li><a class="dropdown-item" href="#">กีฬาโลก</a></li>
+                    <li><a class="dropdown-item" href="#">แกลเลอรี่</a></li>
+                    <li><a class="dropdown-item" href="#">ข่าวเอเชียนเกมส์</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink7" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  บันเทิง
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink7">
+                    <li><a class="dropdown-item" href="#">ข่าวบันเทิง</a></li>
+                    <li><a class="dropdown-item" href="#">ดารา เซเลบ</a></li>
+                    <li><a class="dropdown-item" href="#">กอสซิบ</a></li>
+                    <li><a class="dropdown-item" href="#">นางงาม</a></li>
+                    <li><a class="dropdown-item" href="#">ละคร ซีรีย์</a></li>
+                    <li><a class="dropdown-item" href="#">เพลง</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink8" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ดวง
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink8">
+                    <li><a class="dropdown-item" href="#">ดูดวงรายวัน</a></li>
+                    <li><a class="dropdown-item" href="#">ทำนายฝัน</a></li>
+                    <li><a class="dropdown-item" href="#">ดูดวงไพ่ยิปซี</a></li>
+                    <li><a class="dropdown-item" href="#">ดูดวงความรัก</a></li>
+                    <li><a class="dropdown-item" href="#">ดูดวงราศี</a></li>
+                    <li><a class="dropdown-item" href="#">ดูดวงนักษัตร</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink8" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  หวย
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink8">
+                    <li><a class="dropdown-item" href="#">ตรวจหวยย้อนหลัง</a></li>
+                    <li><a class="dropdown-item" href="#">เลขเด็ด</a></li>
+                    <li><a class="dropdown-item" href="#">สถิติหวยย้อนหลัง</a></li>
+                  </ul>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">นิยาย</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ช็อปปิ้ง</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">MONEY</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">MIRROR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">NEWS DAILY +</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><span class="dot"></span>LIVE</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+</header>
+      
+<!-- Spacer -->
+<div class="spacer"></div>
+
+
+<body>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-12">
+          <img src="img/news/45.webp" alt="News Image" class="news-image">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-2 recommended-articles">
+          <h5>ข่าวแนะนำ</h5>
+          <img src="img/news/49.webp" alt="Small Image">
+          <a href="#"><i class="bi bi-1-circle"></i>รัฐบาลเตือนระวังอันตรายจากฝนตกหนัก นายกฯ สั่งติดตามสถานการณ์น้ำต่อเนื่อง</a>
+          <a href="#"><i class="bi bi-2-circle"></i>เตือน 27 จังหวัด เฝ้าระวังน้ำท่วมฉับพลัน น้ำป่าไหลหลาก 20-26 พ.ค. 67</a>
+          <a href="#"><i class="bi bi-3-circle"></i>อุตุฯ ประกาศประเทศไทยสิ้นสุด "ฤดูร้อน" เริ่มต้นเข้าสู่ "ฤดูฝน" 2567 แล้ว</a>
+          <a href="#"><i class="bi bi-4-circle"></i>ให้บางกะปิ-วังทองหลางขยายท่อ ระบายน้ำฝนแก้น้ำท่วมมหาดไทย</a>
+        </div>
+        <div class="col-lg-6 content-wrapper">
+          <h3>22-24 พ.ค. เตือนทั่วไทยระวัง "ฝนตกหนักถึงหนักมาก" เช็กจังหวัดที่ได้รับผลกระทบ</h3>
+          <p class="indent">
+              "กรมอุตุนิยมวิทยา" ประกาศฉบับ 7 เตือนวันที่ 22-24 พ.ค.นี้ ทั่วไทยระวัง "ฝนตกหนักถึงหนักมาก" อาจทำให้เกิดน้ำท่วมฉับพลัน เช็กจังหวัดที่ได้รับผลกระทบ
+          </p>
+          <p class="indent">
+              วันที่ 22 พ.ค. 2567 เว็บไซต์กรมอุตุนิยมวิทยา ประกาศเรื่อง "ฝนตกหนักถึงหนักมากบริเวณประเทศไทยและคลื่นลมแรงบริเวณทะเลอันดามัน ฉบับที่ 7" โดยระบุว่า ในช่วงวันที่ 22-24 พ.ค. 67 มรสุมตะวันตกเฉียงใต้ที่พัดปกคลุมทะเลอันดามัน ด้านตะวันตกของประเทศไทย และอ่าวไทยมีกำลังแรงขึ้น ประกอบกับมีหย่อมความกดอากาศต่ำปกคลุมบริเวณประเทศไทยตอนบน
+          </p>
+          <p class="indent">
+              ลักษณะเช่นนี้ ทำให้ประเทศไทยมีฝนตกหนักหลายพื้นที่ และมีฝนตกหนักมากบางแห่งในภาคเหนือ ภาคตะวันออกเฉียงเหนือ ภาคกลาง ภาคตะวันออก และภาคใต้ฝั่งตะวันตก ขอให้ประชาชนในบริเวณดังกล่าวระวังอันตรายจากฝนตกหนักถึงหนักมากและฝนที่ตกสะสม ซึ่งอาจทำให้เกิดน้ำท่วมฉับพลัน และน้ำป่าไหลหลาก โดยเฉพาะพื้นที่ลาดเชิงเขาใกล้ทางน้ำไหลผ่านและพื้นที่ลุ่ม รวมทั้งเพิ่มความระมัดระวังในการสัญจรผ่านบริเวณที่มีฝนฟ้าคะนองไว้ด้วย โดยจังหวัดที่คาดว่าจะมีฝนตกหนักถึงหนักมากบางแห่ง มีดังนี้
+          </p>
+          <p class="indent">
+              วันที่ 22 พฤษภาคม 2567<br>
+              ภาคเหนือ : จังหวัดแม่ฮ่องสอน เชียงใหม่ ลำพูน ลำปาง แพร่ อุตรดิตถ์ สุโขทัย ตาก กำแพงเพชร พิจิตร พิษณุโลก และเพชรบูรณ์
+          </p>
+          <p class="indent">
+              ภาคตะวันออกเฉียงเหนือ : จังหวัดเลย หนองคาย บึงกาฬ หนองบัวลำภู อุดรธานี สกลนคร นครพนม ชัยภูมิ ขอนแก่น กาฬสินธุ์ มุกดาหาร มหาสารคาม ร้อยเอ็ด ยโสธร อำนาจเจริญ นครราชสีมา บุรีรัมย์ สุรินทร์ ศรีสะเกษ และอุบลราชธานี
+          </p>
+          <p class="indent">
+              ภาคกลาง : จังหวัดนครสวรรค์ อุทัยธานี ชัยนาท ลพบุรี สระบุรี สิงห์บุรี อ่างทอง สุพรรณบุรี พระนครศรีอยุธยา กาญจนบุรี ราชบุรี นครปฐม สมุทรสาคร และสมุทรสงคราม รวมทั้งกรุงเทพมหานครและปริมณฑล
+          </p>
+          <p class="indent">
+              ภาคตะวันออก : จังหวัดนครนายก ปราจีนบุรี สระแก้ว ฉะเชิงเทรา ชลบุรี ระยอง จันทบุรี และตราด
+          </p>
+          <p class="indent">
+              ภาคใต้ : จังหวัดเพชรบุรี ประจวบคีรีขันธ์ ชุมพร สุราษฎร์ธานี ระนอง พังงา ภูเก็ต และกระบี่
+          </p>
+          <p class="indent">
+              วันที่ 23-24 พฤษภาคม 2567<br>
+              ภาคเหนือ : จังหวัดแม่ฮ่องสอน เชียงใหม่ เชียงราย ลำพูน ลำปาง พะเยา น่าน แพร่ ตาก สุโขทัย กำแพงเพชร พิษณุโลก พิจิตร และเพชรบูรณ์
+          </p>
+          <p class="indent">
+              ภาคตะวันออกเฉียงเหนือ : จังหวัดเลย หนองคาย บึงกาฬ หนองบัวลำภู และอุดรธานี
+          </p>
+          <p class="indent">
+              ภาคกลาง : จังหวัดนครสวรรค์ อุทัยธานี ชัยนาท สุพรรณบุรี กาญจนบุรี ราชบุรี นครปฐม สมุทรสาคร และสมุทรสงคราม รวมทั้งกรุงเทพมหานครและปริมณฑล
+          </p>
+          <p class="indent">
+              ภาคตะวันออก : จังหวัดฉะเชิงเทรา ชลบุรี ระยอง จันทบุรี และตราด
+          </p>
+          <p class="indent">
+              ภาคใต้ : จังหวัดเพชรบุรี ประจวบคีรีขันธ์ ชุมพร สุราษฎร์ธานี ระนอง และพังงา
+          </p>
+          <p class="indent">
+              อนึ่ง หย่อมความกดอากาศต่ำกำลังแรงบริเวณอ่าวเบงกอลตอนล่างมีแนวโน้มจะมีกำลังแรงขึ้นเป็นพายุดีเปรสชันในช่วงวันที่ 23-24 พ.ค. 67 และคาดว่าจะเคลื่อนขึ้นฝั่งบริเวณด้านตะวันออกเฉียงเหนือของประเทศอินเดียและประเทศบังคลาเทศในช่วงวันที่ 25-26 พ.ค. 67 โดยพายุนี้ไม่มีผลกระทบโดยตรงต่อลักษณะอากาศของประเทศไทย แต่จะส่งผลให้มรสุมตะวันตกเฉียงใต้ที่พัดปกคลุมทะเลอันดามัน ด้านตะวันตกของประเทศไทย และอ่าวไทยมีกำลังแรงขึ้น
+          </p>
+          <p class="indent">
+              ลักษณะเช่นนี้ทำให้ในช่วงวันที่ 22-24 พ.ค. 67 ประเทศไทยมีฝนเพิ่มขึ้น และมีฝนตกหนักหลายพื้นที่ โดยมีฝนตกหนักมากบางแห่ง ส่วนในช่วงวันที่ 23-26 พ.ค. 67 คลื่นลมบริเวณทะเลอันดามันตอนบนมีกำลังค่อนข้างแรง โดยมีคลื่นสูง 2-3 เมตร บริเวณที่มีฝนฟ้าคะนองคลื่นสูงมากกว่า 3 เมตร ทะเลอันดามันตอนล่างมีคลื่นสูงประมาณ 2 เมตร บริเวณที่มีฝนฟ้าคะนองคลื่นสูงมากกว่า 2 เมตร
+          </p>
+          <p class="indent">
+              สำหรับอ่าวไทยทะเลมีคลื่นสูงประมาณ 1 เมตร ห่างฝั่งคลื่นสูง 1-2 เมตร บริเวณที่มีฝนฟ้าคะนองคลื่นสูงมากกว่า 2 เมตร ขอให้ชาวเรือบริเวณทะเลอันดามันและอ่าวไทยเดินเรือด้วยความระมัดระวังและหลีกเลี่ยงการเดินเรือในบริเวณที่มีฝนฟ้าคะนอง สำหรับชาวเรือบริเวณทะเลอันดามันตอนบนควรงดออกจากฝั่งในช่วงวันที่ 23-26 พ.ค. 67 นี้ไว้ด้วย
+          </p>
+          <p class="indent">
+            ทั้งนี้ จึงขอให้ประชาชนติดตามประกาศจากกรมอุตุนิยมวิทยา และสามารถติดตามข้อมูลที่เว็บไซต์กรมอุตุนิยมวิทยา 
+            <a href="http://www.tmd.go.th" target="_blank">http://www.tmd.go.th</a> 
+            หรือสายด่วนพยากรณ์อากาศ 1182 ได้ตลอด 24 ชั่วโมง.
+          </p>
+          <!-- More content here -->
+        </div>
+        <div class="col-lg-4 p-3">
+          <div class="news-section">
+            <div class="advertisement">
+              <img src="img/news/45.webp" alt="Advertisement Image">
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <h5 class="news-title-section">ข่าวเด่น</h5>
+              <a href="index.html" class="view-all">ดูทั้งหมด<i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="news-item d-flex">
+              <div class="flex-grow-1">
+                <a href="#" class="news-link">
+                  <div class="news-title">ออสเตรเลียพบมนุษย์ติดเชื้อไข้หวัดนก H5N1 รายแรกของประเทศ</div>
+                  <a href="#" class="news-time-tag">ต่างประเทศ</a>
+                </a>
+              </div>
+              <img src="img/news/46.webp" alt="ข่าว 1" class="ms-3">
+            </div>
+            <div class="news-item d-flex">
+              <div class="flex-grow-1">
+                <a href="#" class="news-link">
+                  <div class="news-title">นายกฯ อังกฤษ ประกาศจัดเลือกตั้ง 4 ก.ค.นี้ หลังถูกกดดันอย่างหนัก</div>
+                  <a href="#" class="news-time-tag">ต่างประเทศ</a>
+                </a>
+              </div>
+              <img src="img/news/47.webp" alt="ข่าว 2" class="ms-3">
+            </div>
+            <div class="news-item d-flex">
+              <div class="flex-grow-1">
+                <a href="#" class="news-link">
+                  <div class="news-title">"เจริญศักดิ์" เปิดใจ "เมืองทองฯ" ชี้ "บุรีรัมย์" ตอนนี้ดูดีราวกับไปเจอ "บีบีซียู"</div>
+                  <a href="#" class="news-time-tag">ฟุตบอลไทย</a>
+                </a>
+              </div>
+              <img src="img/news/48.webp" alt="ข่าว 3" class="ms-3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Spacer -->
+<div class="banner  container-fluid   mt-4">
+    <div class="row">
+      <div class="col-12 d-flex align-items-center justify-content-center">
+        <img src="img/banner/banner.png" alt="banner" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-light text-dark">
+    <div class="container py-5">
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-4 text-custom-dark">ข่าวที่เกี่ยวข้อง</h2>
+          <ul class="list-unstyled space-y-2">
+            <li class="d-flex align-items-center">
+              <span class="bg-custom-dark rounded-full d-inline-block me-2" style="width: 0.5rem; height: 0.5rem;"></span>
+              <a href="#" class="text-custom-dark text-decoration-none">อุตุฯ ประกาศประเทศไทยสิ้นสุด "ฤดูร้อน" เริ่มต้นเข้าสู่ "ฤดูฝน" 2567 แล้ว</a>
+            </li>
+            <li class="d-flex align-items-center">
+              <span class="bg-custom-dark rounded-full d-inline-block me-2" style="width: 0.5rem; height: 0.5rem;"></span>
+              <a href="#" class="text-custom-dark text-decoration-none">ประกาศฉบับ 1 เดือนไทย "ฝนตกหนัก" บางแห่ง ระวังน้ำท่วมฉับพลัน</a>
+            </li>
+            <li class="d-flex align-items-center">
+              <span class="bg-custom-dark rounded-full d-inline-block me-2" style="width: 0.5rem; height: 0.5rem;"></span>
+              <a href="#" class="text-custom-dark text-decoration-none">อุตุฯ ชี้แจงแล้ว ปม "คลื่นความหนาวจะแผ่ปกคลุมประเทศไทยทุกภาค" ย้ำไม่จริง</a>
+            </li>
+            <li class="d-flex align-items-center">
+              <span class="bg-custom-dark rounded-full d-inline-block me-2" style="width: 0.5rem; height: 0.5rem;"></span>
+              <a href="#" class="text-custom-dark text-decoration-none">4-7 พ.ค. เดือน "พายุฤดูร้อน" ฉบับที่ 8 เช็กจังหวัดที่จะได้รับผลกระทบ</a>
+            </li>
+            <li class="d-flex align-items-center">
+              <span class="bg-custom-dark rounded-full d-inline-block me-2" style="width: 0.5rem; height: 0.5rem;"></span>
+              <a href="#" class="text-custom-dark text-decoration-none">อุตุฯ ประกาศเดือน "พายุฤดูร้อน" ฉบับที่ 7 หลายจังหวัดได้รับผลกระทบ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-dark text-white p-4 rounded">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h2 class="fw-bold text-white">วิดีโอแนะนำ</h2>
+              <a href="index.html" class="text-white d-flex align-items-center text-decoration-none">
+                ดูทั้งหมด
+                <span class="ms-2">&rarr;</span>
+              </a>
+            </div>
+            <div class="row g-3">
+              <div class="col-lg-4 col-md-6">
+                <a href="#" class="Video-link">
+                  <img src="img/news/52.jpg" alt="Video 1" class="img-fluid mb-2">
+                  <p class="Video-description">นาทีทหารเกณฑ์หนีทัพบุกเดี่ยวชิงทอง ร้านทองกลางตลาดหนองหญ้า สุพรรณบุรี</p>
+                  <a href="#" class="Video-tag">ทั่วไทย</a>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <a href="#" class="Video-link">
+                  <img src="img/news/51.jpg" alt="Video 2" class="img-fluid mb-2">
+                  <p class="Video-description">หนุ่มหื่นบุกบ้านกลางดึกหวังขืนใจ เจอสาวฮึดสู้กลับ ใช้เสื้อรัดคอหมดลมหายใจ</p>
+                  <a href="#" class="Video-tag">ทั่วไทย</a>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <a href="#" class="Video-link">
+                  <img src="img/news/50.jpg" alt="Video 3" class="img-fluid mb-2">
+                  <p class="Video-description">รู้จัก พ่อลูกขับรถตุ๊กๆ ร้อง นักท่องเที่ยวต่างชาติจ่ายแบงก์ร้อยบอกเป็นแบงก์พัน โวยเอาเงินทอน พอไม่ได้ทำร้ายบาดเจ็บ</p>
+                  <a href="#" class="Video-tag">ทั่วไทย</a>
+                </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <div class="row">
+            <div class="col-3">
+                <h5 class="share mb-4 text-custom-dark">แชร์ข่าว</h5>
+                <div class="social-share d-flex gap-4">
+                    <a href="#" class="text-primary"><img src="img/icons/facebook.png" alt="Facebook"></a>
+                    <a href="#" class="text-dark"><img src="img/icons/twitter.png" alt="Twitter"></a>
+                    <a href="#" class="text-success"><img src="img/icons/line.png" alt="Line"></a>
+                    <a href="#" class="text-warning"><img src="img/icons/link.png" alt="RSS"></a>
+                </div>
+            </div>
+            <div class="col-6">
+              <h5 class="TagNew mb-4 text-dark">แท็กที่เกี่ยวข้อง</h5>
+              <div class="d-flex flex-wrap gap-2">
+                  <a href="#" class="tag-link px-3 py-1 rounded-pill">ประกาศกรมอุตุ</a>
+                  <a href="#" class="tag-link px-3 py-1 rounded-pill">พายุ</a>
+                  <a href="#" class="tag-link px-3 py-1 rounded-pill">พายุฤดูร้อน</a>
+                  <a href="#" class="tag-link px-3 py-1 rounded-pill">กรมอุตุนิยมวิทยา</a>
+                  <a href="#" class="tag-link px-3 py-1 rounded-pill">สภาพอากาศวันนี้</a>
+                  <a href="#" class="tag-link px-3 py-1 rounded-pill">พยากรณ์อากาศ</a>
+                  <a href="#" class="tag-link px-3 py-1 rounded-pill">ฝนตกหนัก</a>
+                  <a href="#" class="tag-link px-3 py-1 rounded-pill">เตือนฝนตก</a>
+                  <a href="#" class="tag-link px-3 py-1 rounded-pill">ข่าววันนี้</a>
+                  <a href="#" class="tag-link px-3 py-1 rounded-pill">ข่าวอัปเดต</a>
+              </div>
+          </div>
+          
+        </div>
+    </div>
+    
+  </div>
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="container mt-5">
+      <div class="footer-logo">
+        <img src="img/footer/logo-dark.png" alt="Logo 1">
+        <img src="img/footer/logo-dark.png" alt="Logo 2">
+        <img src="img/footer/logo-dark.png" alt="Logo 3">
+        <img src="img/footer/logo-dark.png" alt="Logo 4">
+        <img src="img/footer/logo-dark.png" alt="Logo 5">
+      </div>
+  
+      <div class="footer-content">
+        <div class="footer-column">
+          <h5>ข่าว</h5>
+          <ul>
+            <li><a href="#" class="footer-link">พระราชสำนัก</a></li>
+            <li><a href="#" class="footer-link">ในกระแส</a></li>
+            <li><a href="#" class="footer-link">เศรษฐกิจ</a></li>
+            <li><a href="#" class="footer-link">อาชญากรรม</a></li>
+            <li><a href="#" class="footer-link">ราคาทองคำ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>เนื้อหาที่น่าสนใจ</h5>
+          <ul>
+            <li><a href="#" class="footer-link">รายการพิเศษ</a></li>
+            <li><a href="#" class="footer-link">คอลัมน์</a></li>
+            <li><a href="#" class="footer-link">ดวง</a></li>
+            <li><a href="#" class="footer-link">นิยาย</a></li>
+            <li><a href="#" class="footer-link">Podcast</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>กีฬา</h5>
+          <ul>
+            <li><a href="#" class="footer-link">ฟุตบอลต่างประเทศ</a></li>
+            <li><a href="#" class="footer-link">ฟุตบอลไทย</a></li>
+            <li><a href="#" class="footer-link">Sport Insider</a></li>
+            <li><a href="#" class="footer-link">กีฬาโลก</a></li>
+            <li><a href="#" class="footer-link">แกลเลอรี่</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>เกี่ยวกับเรา</h5>
+          <ul>
+            <li><a href="#" class="footer-link">กิจกรรม</a></li>
+            <li><a href="#" class="footer-link">ร่วมงานกับเรา</a></li>
+            <li><a href="#" class="footer-link">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="footer-link">มูลนิธิ</a></li>
+            <li><a href="#" class="footer-link">ศูนย์ข้อมูล</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>ช็อปปิ้ง</h5>
+          <ul>
+            <li><a href="#" class="footer-link">ช็อปปิ้ง</a></li>
+            <li><a href="#" class="footer-link">ซื้อ-ขาย</a></li>
+            <li><a href="#" class="footer-link">ส่วนลด</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>ติดตามเราได้ที่</h5>
+          <div class="social-icons">
+            <a href="#"><img src="img/footer/facebook-icon.png" alt="Facebook" class="img-fluid"></a>
+            <a href="#"><img src="img/footer/twitter-icon.png" alt="Twitter" class="img-fluid"></a>
+            <a href="#"><img src="img/footer/instagram-icon.png" alt="Instagram" class="img-fluid"></a>
+            <a href="#"><img src="img/footer/youtube-icon.png" alt="YouTube" class="img-fluid"></a>
+            <a href="#"><img src="img/footer/tiktok-icon.png" alt="tiktok" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Bottom bar for date and time -->
+      <div class="footer-bottom mt-5">
+        <span id="currentDateTime"></span>
+    </div>
+</footer>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+
+<script src="js/script.js"></script>
+</div>
+</html>
